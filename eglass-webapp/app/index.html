@@ -1,0 +1,275 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, 
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/smart.css -->
+    <link rel="stylesheet" href="styles/smart.css" />
+    <link rel="stylesheet" href="styles/font-awesome.min.css" />
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <!-- endbuild -->
+
+    <!-- GOOGLE FONT -->
+    <link rel="stylesheet" 
+        href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+  </head>
+
+  <body ng-app="eglassWebappApp">
+    
+    <header id="header">
+        <div id="logo-group">
+            <!-- PLACE YOUR LOGO HERE -->
+            <span id="logo"> <img src="images/logo.png" alt="SmartAdmin"> </span>
+            <!-- END LOGO PLACEHOLDER -->
+        </div>
+
+        <!-- pulled right: nav area -->
+        <div class="pull-right">
+            <!-- fullscreen button -->
+            <div id="fullscreen" class="btn-header transparent pull-right">
+                <span> 
+                    <a href="javascript:void(0);" title="Full Screen">
+                        <i class="fa fa-fullscreen"></i>
+                    </a>
+                </span>
+            </div>
+            <!-- end fullscreen button -->
+
+            <!-- collapse menu button -->
+            <div id="hide-menu" class="btn-header pull-right">
+                <span>
+                    <a href="javascript:void(0);" title="Collapse Menu">
+                        <i class="fa fa-reorder"></i>
+                    </a>
+                </span>
+            </div>
+            <!-- end collapse menu -->
+
+            <!-- logout button -->
+            <div id="logout" class="btn-header transparent pull-right">
+                <span>
+                    <a href="javascript:void(0);" title="Sign Out">
+                        <i class="fa fa-sign-out"></i>
+                    </a>
+                </span>
+            </div>
+            <!-- end logout button -->
+
+            <!-- search mobile button (this is hidden till mobile view port) -->
+            <div id="search-mobile" class="btn-header transparent pull-right">
+                <span>
+                    <a href="javascript:void(0)" title="Search">
+                        <i class="fa fa-search"></i>
+                    </a>
+                </span>
+            </div>
+            <!-- end search mobile button -->
+
+            <!-- input: search field -->
+            <form class="header-search pull-right">
+                <input type="text" placeholder="Super Find" id="search-fld">
+                <button type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+                <a href="javascript:void(0);" id="cancel-search-js" title="Cancel Search"><i class="fa fa-times"></i></a>
+            </form>
+            <!-- end input: search field -->
+
+            <!-- multiple lang dropdown : find all flags in the image folder -->
+            <ul class="header-dropdown-list hidden-xs">
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img alt="" src="images/flags/br.png"> <span> pt-Br </span> <i class="fa fa-angle-down"></i> </a>
+                    <ul class="dropdown-menu pull-right">
+                        <li class="active">
+                            <a href="javascript:void(0);"><img alt="" src="images/flags/br.png"> Português Brasil</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- end multiple lang -->
+
+        </div>
+        <!-- end pulled right: nav area -->
+
+    </header>
+    <!-- END HEADER -->
+
+    <aside id="left-panel">
+
+        <!-- User info -->
+        <div class="login-info">
+            <span> <!-- User image size is adjusted inside CSS, it should stay as it --> 
+                
+                <a href="javascript:void(0);" id="show-shortcut">
+                    <img src="http://2.gravatar.com/avatar/b1003eada202b836f1a665f2398da640" alt="me" class="online" /> 
+                    <span>
+                        Joarley Santos
+                    </span>
+                    <i class="fa fa-angle-down"></i>
+                </a> 
+                
+            </span>
+        </div>
+        <!-- end user info -->
+
+        <!-- NAVIGATION : This navigation is also responsive
+
+        To make this navigation dynamic please make sure to link the node
+        (the reference to the nav > ul) after page load. Or the navigation
+        will not initialize.
+        -->
+        <nav>
+            <!-- NOTE: Notice the gaps after each icon usage <i></i>..
+            Please note that these links work a bit different than
+            traditional hre="" links. See documentation for details.
+            -->
+
+            <ul>
+                <li>
+                    <a href="javascript:void(0);" title="Home">
+                        <i class="fa fa-lg fa-fw fa-home"></i>
+                        <span class="menu-item-parent">Home</span>
+                    </a>
+                </li>                
+            </ul>
+        </nav>
+        <span class="minifyme"> <i class="fa fa-arrow-circle-left hit"></i> </span>
+
+    </aside>
+    <!-- END NAVIGATION -->
+
+
+    <div id="main" role="main">
+
+        <!-- RIBBON -->
+        <div id="ribbon">
+
+            <!-- breadcrumb -->
+            <ol class="breadcrumb">
+                <li>
+                    Blank Page
+                </li>
+            </ol>
+            <!-- end breadcrumb -->
+
+            <!-- You can also add more buttons to the
+            ribbon for further usability
+
+            Example below:
+
+            <span class="ribbon-button-alignment pull-right">
+            <span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa-grid"></i> Change Grid</span>
+            <span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>
+            <span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>
+            </span> -->
+
+        </div>
+        <!-- END RIBBON -->
+
+        <!-- MAIN CONTENT -->
+        <div id="content" ng-view=""></div>
+        <!-- END MAIN CONTENT -->
+
+    </div>
+    <!-- END MAIN PANEL -->
+
+    <!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+    Note: These tiles are completely responsive,
+    you can add as many as you like
+    -->
+    <div id="shortcut">
+        <ul>
+            <li>
+                <a href="#inbox.html" class="jarvismetro-tile big-cubes bg-color-blue"> <span class="iconbox"> <i class="fa fa-envelope fa-4x"></i> <span>Mail <span class="label pull-right bg-color-darken">14</span></span> </span> </a>
+            </li>
+            <li>
+                <a href="#calendar.html" class="jarvismetro-tile big-cubes bg-color-orangeDark"> <span class="iconbox"> <i class="fa fa-calendar fa-4x"></i> <span>Calendar</span> </span> </a>
+            </li>
+            <li>
+                <a href="#gmap-xml.html" class="jarvismetro-tile big-cubes bg-color-purple"> <span class="iconbox"> <i class="fa fa-map-marker fa-4x"></i> <span>Maps</span> </span> </a>
+            </li>
+            <li>
+                <a href="#invoice.html" class="jarvismetro-tile big-cubes bg-color-blueDark"> <span class="iconbox"> <i class="fa fa-book fa-4x"></i> <span>Invoice <span class="label pull-right bg-color-darken">99</span></span> </span> </a>
+            </li>
+            <li>
+                <a href="#gallery.html" class="jarvismetro-tile big-cubes bg-color-greenLight"> <span class="iconbox"> <i class="fa fa-picture-o fa-4x"></i> <span>Gallery </span> </span> </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" class="jarvismetro-tile big-cubes selected bg-color-pinkDark"> <span class="iconbox"> <i class="fa fa-user fa-4x"></i> <span>My Profile </span> </span> </a>
+            </li>
+        </ul>
+    </div>
+    <!-- END SHORTCUT AREA -->
+
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/smart.js -->
+    <!-- CUSTOM NOTIFICATION -->
+    <script src="scripts/lib/notification/SmartNotification.min.js"></script>
+
+    <!-- JARVIS WIDGETS -->
+    <script src="scripts/lib/smartwidgets/jarvis.widget.min.js"></script>
+
+    <!-- EASY PIE CHARTS -->
+    <script src="scripts/lib/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+
+    <!-- SPARKLINES -->
+    <script src="scripts/lib/plugin/sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- JQUERY VALIDATE -->
+    <script src="scripts/lib/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+    <!-- JQUERY MASKED INPUT -->
+    <script src="scripts/lib/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+    <!-- JQUERY SELECT2 INPUT -->
+    <script src="scripts/lib/plugin/select2/select2.min.js"></script>
+
+    <!-- JQUERY UI + Bootstrap Slider -->
+    <script src="scripts/lib/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+    <!-- browser msie issue fix -->
+    <script src="scripts/lib/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+
+    <!-- FastClick: For mobile devices -->
+    <script src="scripts/lib/plugin/fastclick/fastclick.js"></script>
+
+    <!-- FastClick: For mobile devices -->
+    <script src="scripts/lib/smartadmin/app.js"></script>
+    
+    <script>
+    $(document).ready(function() {
+        pageSetUp();
+    });
+    </script>
+
+    <!-- endbuild -->
+
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <!-- endbuild -->
+</body>
+</html>
