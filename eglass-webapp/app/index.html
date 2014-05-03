@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <title></title>
 
-    <meta name="viewport" content="width=device-width, 
+    <meta name="viewport" content="width=device-width,
         initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
@@ -22,12 +22,12 @@
     <!-- endbuild -->
 
     <!-- GOOGLE FONT -->
-    <link rel="stylesheet" 
+    <link rel="stylesheet"
         href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
   </head>
 
-  <body ng-app="eglassWebappApp">
-    
+  <body ng-app="eglass-webapp">
+
     <header id="header">
         <div id="logo-group">
             <!-- PLACE YOUR LOGO HERE -->
@@ -39,7 +39,7 @@
         <div class="pull-right">
             <!-- fullscreen button -->
             <div id="fullscreen" class="btn-header transparent pull-right">
-                <span> 
+                <span>
                     <a href="javascript:void(0);" title="Full Screen">
                         <i class="fa fa-fullscreen"></i>
                     </a>
@@ -110,16 +110,16 @@
 
         <!-- User info -->
         <div class="login-info">
-            <span> <!-- User image size is adjusted inside CSS, it should stay as it --> 
-                
+            <span> <!-- User image size is adjusted inside CSS, it should stay as it -->
+
                 <a href="javascript:void(0);" id="show-shortcut">
-                    <img src="http://2.gravatar.com/avatar/b1003eada202b836f1a665f2398da640" alt="me" class="online" /> 
+                    <img src="http://2.gravatar.com/avatar/b1003eada202b836f1a665f2398da640" alt="me" class="online" />
                     <span>
                         Joarley Santos
                     </span>
                     <i class="fa fa-angle-down"></i>
-                </a> 
-                
+                </a>
+
             </span>
         </div>
         <!-- end user info -->
@@ -142,7 +142,7 @@
                         <i class="fa fa-lg fa-fw fa-home"></i>
                         <span class="menu-item-parent">Home</span>
                     </a>
-                </li>                
+                </li>
             </ul>
         </nav>
         <span class="minifyme"> <i class="fa fa-arrow-circle-left hit"></i> </span>
@@ -155,33 +155,12 @@
 
         <!-- RIBBON -->
         <div id="ribbon">
-
-            <!-- breadcrumb -->
-            <ol class="breadcrumb">
-                <li>
-                    Blank Page
-                </li>
-            </ol>
-            <!-- end breadcrumb -->
-
-            <!-- You can also add more buttons to the
-            ribbon for further usability
-
-            Example below:
-
-            <span class="ribbon-button-alignment pull-right">
-            <span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa-grid"></i> Change Grid</span>
-            <span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>
-            <span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>
-            </span> -->
-
         </div>
         <!-- END RIBBON -->
 
         <!-- MAIN CONTENT -->
         <div id="content" ng-view=""></div>
         <!-- END MAIN CONTENT -->
-
     </div>
     <!-- END MAIN PANEL -->
 
@@ -191,24 +170,7 @@
     -->
     <div id="shortcut">
         <ul>
-            <li>
-                <a href="#inbox.html" class="jarvismetro-tile big-cubes bg-color-blue"> <span class="iconbox"> <i class="fa fa-envelope fa-4x"></i> <span>Mail <span class="label pull-right bg-color-darken">14</span></span> </span> </a>
-            </li>
-            <li>
-                <a href="#calendar.html" class="jarvismetro-tile big-cubes bg-color-orangeDark"> <span class="iconbox"> <i class="fa fa-calendar fa-4x"></i> <span>Calendar</span> </span> </a>
-            </li>
-            <li>
-                <a href="#gmap-xml.html" class="jarvismetro-tile big-cubes bg-color-purple"> <span class="iconbox"> <i class="fa fa-map-marker fa-4x"></i> <span>Maps</span> </span> </a>
-            </li>
-            <li>
-                <a href="#invoice.html" class="jarvismetro-tile big-cubes bg-color-blueDark"> <span class="iconbox"> <i class="fa fa-book fa-4x"></i> <span>Invoice <span class="label pull-right bg-color-darken">99</span></span> </span> </a>
-            </li>
-            <li>
-                <a href="#gallery.html" class="jarvismetro-tile big-cubes bg-color-greenLight"> <span class="iconbox"> <i class="fa fa-picture-o fa-4x"></i> <span>Gallery </span> </span> </a>
-            </li>
-            <li>
-                <a href="javascript:void(0);" class="jarvismetro-tile big-cubes selected bg-color-pinkDark"> <span class="iconbox"> <i class="fa fa-user fa-4x"></i> <span>My Profile </span> </span> </a>
-            </li>
+
         </ul>
     </div>
     <!-- END SHORTCUT AREA -->
@@ -257,7 +219,28 @@
 
     <!-- FastClick: For mobile devices -->
     <script src="scripts/lib/smartadmin/app.js"></script>
-    
+
+    <!-- Flot Chart Plugin: Flot Engine, Flot Resizer, Flot Tooltip -->
+    <script src="scripts/lib/plugin/flot/jquery.flot.cust.js"></script>
+    <script src="scripts/lib/plugin/flot/jquery.flot.resize.js"></script>
+    <script src="scripts/lib/plugin/flot/jquery.flot.tooltip.js"></script>
+
+    <!-- Vector Maps Plugin: Vectormap engine, Vectormap language -->
+    <script src="scripts/lib/plugin/vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="scripts/lib/plugin/vectormap/jquery-jvectormap-world-mill-en.js"></script>
+
+    <!-- Full Calendar -->
+    <script src="scripts/lib/plugin/fullcalendar/jquery.fullcalendar.min.js"></script>
+
+    <!-- Full datatables -->
+    <script src="scripts/lib/plugin/datatables/jquery.dataTables-cust.min.js"></script>
+    <script src="scripts/lib/plugin/datatables/ColReorder.min.js"></script>
+    <script src="scripts/lib/plugin/datatables/FixedColumns.min.js"></script>
+    <script src="scripts/lib/plugin/datatables/ColVis.min.js"></script>
+    <script src="scripts/lib/plugin/datatables/ZeroClipboard.js"></script>
+    <script src="scripts/lib/plugin/datatables/media/js/TableTools.min.js"></script>
+    <script src="scripts/lib/plugin/datatables/DT_bootstrap.js"></script>
+
     <script>
     $(document).ready(function() {
         pageSetUp();
@@ -269,7 +252,7 @@
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/home.js"></script>
     <!-- endbuild -->
 </body>
 </html>

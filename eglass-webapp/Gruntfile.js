@@ -7,7 +7,7 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
 
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
@@ -119,37 +119,37 @@ module.exports = function (grunt) {
 
     less: {
       options: {
-          paths: ['./bower_components']
+        paths: ['./bower_components']
       },
       dist: {
-          options: {
-              cleancss: true,
-              report: 'gzip'
-          },
-          files: [{
-              expand: true,
-              cwd: '<%= yeoman.app %>/styles',
-              src: '{,*/}*.lesss',
-              dest: '.tmp/styles',
-              ext: '.css'
-          }]
+        options: {
+          cleancss: true,
+          report: 'gzip'
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>/styles',
+          src: '{,*/}*.lesss',
+          dest: '.tmp/styles',
+          ext: '.css'
+        }]
 
-          //'!**<%= yeoman.app %>/styles/**',
-          //'<%= yeoman.app %>/styles/smartadmin/smartadmin-production.less'
+        //'!**<%= yeoman.app %>/styles/**',
+        //'<%= yeoman.app %>/styles/smartadmin/smartadmin-production.less'
       },
       server: {
-          options: {
-              sourceMap: true,
-              sourceMapBasepath: '<%= yeoman.app %>/',
-              sourceMapRootpath: '../'
-          },
-          files: [{
-              expand: true,
-              cwd: '<%= yeoman.app %>/styles',
-              src: ['{,*/}*.less', '!**/smartadmin/**'],
-              dest: '.tmp/styles',
-              ext: '.css'
-          }]
+        options: {
+          sourceMap: true,
+          sourceMapBasepath: '<%= yeoman.app %>/',
+          sourceMapRootpath: '../'
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>/styles',
+          src: ['{,*/}*.less', '!**/smartadmin/**'],
+          dest: '.tmp/styles',
+          ext: '.css'
+        }]
       }
     },
 
@@ -384,7 +384,7 @@ module.exports = function (grunt) {
   });
 
 
-  grunt.registerTask('serve', function (target) {
+  grunt.registerTask('serve', function(target) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
     }
@@ -399,7 +399,7 @@ module.exports = function (grunt) {
     ]);
   });
 
-  grunt.registerTask('server', function (target) {
+  grunt.registerTask('server', function(target) {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve:' + target]);
   });
