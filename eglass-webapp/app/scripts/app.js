@@ -2,13 +2,15 @@
 
 angular
   .module('eglass-webapp', ['ngRoute'])
-  .config(function($routeProvider) {
+  .config(function($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode(false);
+
     $routeProvider
-      .when('/', {
+      .when('/home', {
         templateUrl: 'views/home.html',
         controller: 'homeCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/home'
       });
   });
