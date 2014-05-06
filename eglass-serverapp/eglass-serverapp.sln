@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Web
+# Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Distributed Services", "1-Distributed Services", "{D5EFC0CB-7F70-47F2-BD5F-5B3F2DBF82E9}"
@@ -42,6 +42,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1-Services", "4.1-Services", "{4753CDB1-9868-43E0-A649-BB8A092BBB0B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rajastech.EGlass.Infrastructure.Services", "Rajastech.EGlass.Infrastructure.Services\Rajastech.EGlass.Infrastructure.Services.csproj", "{095B9F1B-DFBD-49FB-9A9F-9C7E9C50B259}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5-Docs", "5-Docs", "{EC606144-6750-4696-BB3B-09A25F1B2DC3}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Downloads\cadastros.jpg = ..\..\..\..\Downloads\cadastros.jpg
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
