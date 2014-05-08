@@ -26,18 +26,22 @@ angular.module('eglass-webapp')
 
 	function link(scope, element, attrs)
 	{
-		var target = attrs.fullscreenToggle || 'body';
+		var target = attrs.fullscreenToggle || 'html';
 		var isFullscreen = false;
 
 		scope.$watch(attrs.fullscreenToggle, function(value){
-			target = attrs.fullscreenToggle || 'body';
+			target = attrs.fullscreenToggle || 'html';
 		});
 
 		element.click(function() {
-			if(isFullscreen)
+			if(isFullscreen){
+				$('body').removeClass('full-screen');
 				exitFullscreen();
-			else
+			}
+			else{
+				$('body').addClass('full-screen')
 				launchFullscreen($(target)[0]);
+			}
 
 			isFullscreen = !isFullscreen;
 		});
