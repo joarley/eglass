@@ -15,9 +15,6 @@ module.exports = function(grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
-  // module rewrite plugin
-  var modRewrite = require('connect-modrewrite');
-
   // Define the configuration for all the tasks
   grunt.initConfig({
 
