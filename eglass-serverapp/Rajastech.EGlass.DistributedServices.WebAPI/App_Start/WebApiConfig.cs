@@ -1,5 +1,6 @@
 ﻿namespace Rajastech.EGlass.DistributedServices.WebAPI
 {
+    using Rajastech.EGlass.Infrastructure.CrossCutting.NetFramework.Logging;
     using System.Web.Http;
 
     public static class WebApiConfig

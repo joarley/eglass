@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{41497E70-C03F-4C94-A58F-99D0B34A66A8}</ProjectGuid>
+    <ProjectGuid>{E46C1197-F6C7-4632-8A84-1B4461919127}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Rajastech.EGlass.Infrastructure.CrossCutting</RootNamespace>
-    <AssemblyName>Rajastech.EGlass.Infrastructure.CrossCutting</AssemblyName>
+    <RootNamespace>Rajastech.EGlass.Infrastructure.CrossCutting.NetFramework</RootNamespace>
+    <AssemblyName>Rajastech.EGlass.Infrastructure.CrossCutting.NetFramework</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.2.1.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,14 +48,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Logging\ILogger.cs" />
-    <Compile Include="Logging\ILoggerFactory.cs" />
+    <Compile Include="Logging\NLogLogger.cs" />
+    <Compile Include="Logging\NLogLoggerFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TypeAdapter\ITypeAdapter.cs" />
-    <Compile Include="TypeAdapter\ITypeAdapterFactory.cs" />
+    <Compile Include="TypeAdapter\AutomapperTypeAdapter.cs" />
+    <Compile Include="TypeAdapter\AutomapperTypeAdapterFactory.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rajastech.EGlass.Infrastructure.CrossCutting\Rajastech.EGlass.Infrastructure.CrossCutting.csproj">
+      <Project>{41497e70-c03f-4c94-a58f-99d0b34a66a8}</Project>
+      <Name>Rajastech.EGlass.Infrastructure.CrossCutting</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
