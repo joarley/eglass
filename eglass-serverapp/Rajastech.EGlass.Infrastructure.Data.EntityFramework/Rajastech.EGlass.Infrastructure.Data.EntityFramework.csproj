@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E2595392-7EBC-4E8B-A8F9-A441BE78C28C}</ProjectGuid>
+    <ProjectGuid>{97F5B89E-E2AD-491A-86EF-708E9101F91C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Rajastech.EGlass.Infrastructure.Data.EntityFramework</RootNamespace>
