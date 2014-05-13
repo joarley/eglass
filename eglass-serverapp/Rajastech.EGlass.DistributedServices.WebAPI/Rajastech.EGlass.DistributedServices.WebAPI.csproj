@@ -107,6 +107,16 @@
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rajastech.EGlass.Infrastructure.CrossCutting.NetFramework\Rajastech.EGlass.Infrastructure.CrossCutting.NetFramework.csproj">
+      <Project>{e46c1197-f6c7-4632-8a84-1b4461919127}</Project>
+      <Name>Rajastech.EGlass.Infrastructure.CrossCutting.NetFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rajastech.EGlass.Infrastructure.CrossCutting\Rajastech.EGlass.Infrastructure.CrossCutting.csproj">
+      <Project>{41497e70-c03f-4c94-a58f-99d0b34a66a8}</Project>
+      <Name>Rajastech.EGlass.Infrastructure.CrossCutting</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
