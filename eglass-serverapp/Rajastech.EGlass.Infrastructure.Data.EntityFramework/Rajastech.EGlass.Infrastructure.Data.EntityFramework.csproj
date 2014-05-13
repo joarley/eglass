@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Rajastech.EGlass.Infrastructure.Data.EntityFramework</RootNamespace>
     <AssemblyName>Rajastech.EGlass.Infrastructure.Data.EntityFramework</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,11 +47,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\DataBaseInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mapping\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rajastech.EGlass.Domain.Core\Rajastech.EGlass.Domain.Core.csproj">
+      <Project>{2d4e4e4f-66e8-436d-a1ec-c879649dcda9}</Project>
+      <Name>Rajastech.EGlass.Domain.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rajastech.EGlass.Domain\Rajastech.EGlass.Domain.csproj">
+      <Project>{21d1e75e-888d-4a33-8af3-4be768e0542c}</Project>
+      <Name>Rajastech.EGlass.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rajastech.EGlass.Infrastructure.Data.EntityFramework.Core\Rajastech.EGlass.Infrastructure.Data.EntityFramework.Core.csproj">
+      <Project>{09f76b07-f859-40aa-9061-3e596cb92b0b}</Project>
+      <Name>Rajastech.EGlass.Infrastructure.Data.EntityFramework.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

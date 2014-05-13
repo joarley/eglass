@@ -1,13 +1,10 @@
-﻿using System.Data.Entity;
-using System.Runtime.InteropServices;
-using Reply.Brazil.WCMTools.Domain.Core;
-
-namespace Reply.Brazil.WCMTools.Infrastructure.Persistence.Data.Core.UnitOfWork
+﻿namespace Rajastech.EGlass.Infrastructure.Data.EntityFramework.Core.UnitOfWork
 {
-    public interface IEntityFrameworkUnitOfWork<TEntity> : IUnitOfWork where TEntity: class, IEntity
-    {
-        IDbSet<TEntity> Set();
+    using Rajastech.EGlass.Domain.Core;
+    using System.Data.Entity;
 
-        IDbSet<T> Set<T>() where T : class, IEntity;
+    public interface IEntityFrameworkUnitOfWork: IUnitOfWork
+    {
+        IDbSet<T> Entities<T>() where T : class;
     }
 }

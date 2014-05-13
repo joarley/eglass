@@ -39,6 +39,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -108,6 +116,22 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Rajastech.EGlass.Application.Core\Rajastech.EGlass.Application.Core.csproj">
+      <Project>{a0a70743-db4f-4041-b571-9e076134be28}</Project>
+      <Name>Rajastech.EGlass.Application.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rajastech.EGlass.Application.DTO\Rajastech.EGlass.Application.DTO.csproj">
+      <Project>{357b1cf9-7336-424d-b3fb-e4aa42d8d4d2}</Project>
+      <Name>Rajastech.EGlass.Application.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rajastech.EGlass.Application\Rajastech.EGlass.Application.csproj">
+      <Project>{959094fa-60bd-414b-9945-f2043e5f6d70}</Project>
+      <Name>Rajastech.EGlass.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rajastech.EGlass.Domain.Core\Rajastech.EGlass.Domain.Core.csproj">
+      <Project>{2d4e4e4f-66e8-436d-a1ec-c879649dcda9}</Project>
+      <Name>Rajastech.EGlass.Domain.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Rajastech.EGlass.Infrastructure.CrossCutting.NetFramework\Rajastech.EGlass.Infrastructure.CrossCutting.NetFramework.csproj">
       <Project>{e46c1197-f6c7-4632-8a84-1b4461919127}</Project>
       <Name>Rajastech.EGlass.Infrastructure.CrossCutting.NetFramework</Name>
@@ -115,6 +139,18 @@
     <ProjectReference Include="..\Rajastech.EGlass.Infrastructure.CrossCutting\Rajastech.EGlass.Infrastructure.CrossCutting.csproj">
       <Project>{41497e70-c03f-4c94-a58f-99d0b34a66a8}</Project>
       <Name>Rajastech.EGlass.Infrastructure.CrossCutting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rajastech.EGlass.Infrastructure.Data.EntityFramework.Core\Rajastech.EGlass.Infrastructure.Data.EntityFramework.Core.csproj">
+      <Project>{09f76b07-f859-40aa-9061-3e596cb92b0b}</Project>
+      <Name>Rajastech.EGlass.Infrastructure.Data.EntityFramework.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rajastech.EGlass.Infrastructure.Data.EntityFramework\Rajastech.EGlass.Infrastructure.Data.EntityFramework.csproj">
+      <Project>{97f5b89e-e2ad-491a-86ef-708e9101f91c}</Project>
+      <Name>Rajastech.EGlass.Infrastructure.Data.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rajastech.EGlass.Infrastructure.Services\Rajastech.EGlass.Infrastructure.Services.csproj">
+      <Project>{095b9f1b-dfbd-49fb-9a9f-9c7e9c50b259}</Project>
+      <Name>Rajastech.EGlass.Infrastructure.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

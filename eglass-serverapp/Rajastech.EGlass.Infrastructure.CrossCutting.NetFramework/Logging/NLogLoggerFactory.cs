@@ -8,16 +8,9 @@
 
     public class NLogLoggerFactory : ILoggerFactory
     {
-        static NLogLogger loggerInstance;
-        static object loggerInstanceLock = new object();
-
-        public ILogger Create()
+        public ILogger Create(string logName)
         {
-            lock (loggerInstanceLock)
-                if (loggerInstance == null)
-                    loggerInstance = new NLogLogger(LogManager.GetLogger(""));
-
-            return loggerInstance;
+            return new NLogLogger(LogManager.GetLogger(logName));
         }
     }
 }

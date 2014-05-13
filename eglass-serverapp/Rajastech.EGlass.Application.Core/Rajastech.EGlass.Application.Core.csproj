@@ -40,7 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProjectionExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rajastech.EGlass.Domain.Core\Rajastech.EGlass.Domain.Core.csproj">
+      <Project>{2d4e4e4f-66e8-436d-a1ec-c879649dcda9}</Project>
+      <Name>Rajastech.EGlass.Domain.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rajastech.EGlass.Infrastructure.CrossCutting\Rajastech.EGlass.Infrastructure.CrossCutting.csproj">
+      <Project>{41497e70-c03f-4c94-a58f-99d0b34a66a8}</Project>
+      <Name>Rajastech.EGlass.Infrastructure.CrossCutting</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

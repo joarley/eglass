@@ -10,6 +10,6 @@
         /// Create a new ILog
         /// </summary>
         /// <returns>The ILog created</returns>
-        ILogger Create();
+        ILogger Create(string logName);
     }
 }

@@ -1,51 +1,50 @@
-﻿using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-using System.Data.SqlClient;
-using Reply.Brazil.WCMTools.Infrastructure.Persistence.Data.Core.UnitOfWork;
-
-namespace Rajastech.EGlass.Infrastructure.Data.EntityFramework.Core.UnitOfWork
+﻿namespace Rajastech.EGlass.Infrastructure.Data.EntityFramework.Core.UnitOfWork
 {
-    public class EntityFrameworkUnitOfWork<TEntity> : IEntityFrameworkUnitOfWork<TEntity> where TEntity : class, IEntity
+    using System;
+    using System.Data.Entity;
+    using System.Data.Entity.ModelConfiguration;
+    using System.Data.Entity.ModelConfiguration.Conventions;
+    using System.Linq;
+
+    public class EntityFrameworkUnitOfWork : DbContext,
+        IEntityFrameworkUnitOfWork
     {
-        private readonly DataBaseContext _context;
-
-        public EntityFrameworkUnitOfWork(DataBaseContext context)
+        public EntityFrameworkUnitOfWork(string connectionString)
+            : base(connectionString)
         {
-            _context = context;
         }
 
-        public IDbSet<TEntity> Set()
+        public IDbSet<T> Entities<T>() where T : class
         {
-            return _context.Set<TEntity>();
+            return Set<T>();
         }
 
-        public IDbSet<T> Set<T>() where T : class, IEntity
+        public void Save()
         {
-            return _context.Set<T>();
+            this.Save();
         }
 
-        public void Commit()
+        public void Discard()
         {
-            try
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
+            var typesToRegister = AppDomain.CurrentDomain
+                .GetAssemblies()
+                .SelectMany(a => a.GetTypes())
+                .Where(t => t.BaseType != null && (t.BaseType.Name == typeof(EntityTypeConfiguration<>).Name
+                    || t.BaseType.Name == typeof(ComplexTypeConfiguration<>).Name));
+
+            foreach (var type in typesToRegister)
             {
-                _context.SaveChanges();
+                dynamic configurationInstance = Activator.CreateInstance(type);
+                modelBuilder.Configurations.Add(configurationInstance);
             }
-            catch (DbUpdateException ex)
-            {
-                SqlException s = ex.InnerException.InnerException as SqlException;
 
-                if (s.Number == 547)
-                {
-                    throw new ExceptionWithCodeErro("MSG_E0002", s.Message);
-                }
-
-                throw ex;
-            }
-            
+            base.OnModelCreating(modelBuilder);
         }
-
-        //public void Rollback()
-        //{
-        //}
     }
 }
