@@ -40,10 +40,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\BrazilAddress.cs" />
+    <Compile Include="Core\BrazilPhoneNumber.cs" />
+    <Compile Include="Core\Country.cs" />
+    <Compile Include="Core\IAddress.cs" />
+    <Compile Include="Core\IPhoneNumber.cs" />
+    <Compile Include="Core\State.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StoreAgr\BrazilStoreLocalizedDetails.cs" />
+    <Compile Include="StoreAgr\IStoreLocalizedDetails.cs" />
+    <Compile Include="StoreAgr\Store.cs" />
+    <Compile Include="StoreAgr\StoreType.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Core\" />
+    <ProjectReference Include="..\Rajastech.EGlass.Domain.Core\Rajastech.EGlass.Domain.Core.csproj">
+      <Project>{2d4e4e4f-66e8-436d-a1ec-c879649dcda9}</Project>
+      <Name>Rajastech.EGlass.Domain.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
