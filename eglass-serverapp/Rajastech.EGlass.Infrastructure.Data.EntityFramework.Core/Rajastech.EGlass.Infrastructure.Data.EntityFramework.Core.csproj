@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitOfWork\EntityFrameworkUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\EntityFrameworkUnitOfWorkFactory.cs" />
     <Compile Include="UnitOfWork\IEntityFrameworkUnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -26,7 +26,8 @@
 
             //Data IoC
             string connectionStringName = ConfigurationManager.AppSettings["connectionStringName"];
-            kernel.Bind<IUnitOfWork>().To<EntityFrameworkUnitOfWork>().
+            kernel.Bind<IUnitOfWork>().
+                ToMethod(x => EntityFrameworkUnitOfWorkFactory.Create(connectionStringName)).
                 InRequestScope().WithConstructorArgument(connectionStringName);
         }
 
