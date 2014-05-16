@@ -17,7 +17,9 @@ angular.module('eglass-webapp')
 	function exitFullscreen() {
   		if(document.exitFullscreen) {
     		document.exitFullscreen();
-  		} else if(document.mozCancelFullScreen) {
+      } else if(document.msExitFullscreen){
+        document.msExitFullscreen();
+      } else if(document.mozCancelFullScreen) {
     		document.mozCancelFullScreen();
   		} else if(document.webkitExitFullscreen) {
     		document.webkitExitFullscreen();
@@ -28,10 +30,6 @@ angular.module('eglass-webapp')
 	{
 		var target = attrs.fullscreenToggle || 'html';
 		var isFullscreen = false;
-
-		scope.$watch(attrs.fullscreenToggle, function(value){
-			target = attrs.fullscreenToggle || 'html';
-		});
 
 		element.click(function() {
 			if(isFullscreen){

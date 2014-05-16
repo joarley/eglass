@@ -2,7 +2,7 @@
 
 angular.module('eglass-webapp')
   .controller('homeCtrl', function($scope) {
-    pageSetUp();
+    //pageSetUp();
 
     /*
        * BASIC
