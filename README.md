@@ -1,4 +1,4 @@
-eglass
+E-Glass
 ======
 
 E-Glass ERP

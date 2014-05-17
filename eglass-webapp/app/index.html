@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html>
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -9,6 +9,7 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/src/loading-bar.css" />
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <!-- endbower -->
     <!-- endbuild -->
@@ -19,6 +20,7 @@
     <!-- endbuild -->
 
     <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css" />
     <!-- endbuild -->
 
     <!-- GOOGLE FONT -->
@@ -38,9 +40,9 @@
         <!-- pulled right: nav area -->
         <div class="pull-right">
             <!-- fullscreen button -->
-            <div id="fullscreen" class="btn-header transparent pull-right">
+            <div class="btn-header transparent pull-right">
                 <span>
-                    <a href="javascript:void(0);" title="Full Screen">
+                    <a title="Full Screen" fullscreen-toggle>
                         <i class="fa fa-fullscreen"></i>
                     </a>
                 </span>
@@ -48,9 +50,9 @@
             <!-- end fullscreen button -->
 
             <!-- collapse menu button -->
-            <div id="hide-menu" class="btn-header pull-right">
+            <div class="btn-header transparent pull-right hide-minified">
                 <span>
-                    <a href="javascript:void(0);" title="Collapse Menu">
+                    <a title="Collapse Menu" hide-menu-toggle>
                         <i class="fa fa-reorder"></i>
                     </a>
                 </span>
@@ -58,42 +60,26 @@
             <!-- end collapse menu -->
 
             <!-- logout button -->
-            <div id="logout" class="btn-header transparent pull-right">
+            <div class="btn-header transparent pull-right">
                 <span>
-                    <a href="javascript:void(0);" title="Sign Out">
+                    <a href="#" title="Sign Out">
                         <i class="fa fa-sign-out"></i>
                     </a>
                 </span>
             </div>
             <!-- end logout button -->
 
-            <!-- search mobile button (this is hidden till mobile view port) -->
-            <div id="search-mobile" class="btn-header transparent pull-right">
-                <span>
-                    <a href="javascript:void(0)" title="Search">
-                        <i class="fa fa-search"></i>
-                    </a>
-                </span>
-            </div>
-            <!-- end search mobile button -->
-
-            <!-- input: search field -->
-            <form class="header-search pull-right">
-                <input type="text" placeholder="Super Find" id="search-fld">
-                <button type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
-                <a href="javascript:void(0);" id="cancel-search-js" title="Cancel Search"><i class="fa fa-times"></i></a>
-            </form>
-            <!-- end input: search field -->
-
             <!-- multiple lang dropdown : find all flags in the image folder -->
             <ul class="header-dropdown-list hidden-xs">
                 <li>
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img alt="" src="images/flags/br.png"> <span> pt-Br </span> <i class="fa fa-angle-down"></i> </a>
+                    <a class="dropdown-toggle" data-toggle="dropdown"> 
+                        <img alt="" src="images/flags/br.png">
+                        <span> pt-BR </span>
+                        <i class="fa fa-angle-down"></i>
+                    </a>
                     <ul class="dropdown-menu pull-right">
                         <li class="active">
-                            <a href="javascript:void(0);"><img alt="" src="images/flags/br.png"> Português Brasil</a>
+                            <a href="#"><img alt="" src="images/flags/br.png"> Português Brasil</a>
                         </li>
                     </ul>
                 </li>
@@ -111,15 +97,12 @@
         <!-- User info -->
         <div class="login-info">
             <span> <!-- User image size is adjusted inside CSS, it should stay as it -->
-
-                <a href="javascript:void(0);" id="show-shortcut">
+                <a>
                     <img src="http://2.gravatar.com/avatar/b1003eada202b836f1a665f2398da640" alt="me" class="online" />
                     <span>
                         Joarley Santos
                     </span>
-                    <i class="fa fa-angle-down"></i>
                 </a>
-
             </span>
         </div>
         <!-- end user info -->
@@ -130,7 +113,7 @@
         (the reference to the nav > ul) after page load. Or the navigation
         will not initialize.
         -->
-        <nav>
+        <nav jarvis-menu>
             <!-- NOTE: Notice the gaps after each icon usage <i></i>..
             Please note that these links work a bit different than
             traditional hre="" links. See documentation for details.
@@ -138,14 +121,42 @@
 
             <ul>
                 <li>
-                    <a href="javascript:void(0);" title="Home">
+                    <a href="#home2" title="Home">
+                        <i class="fa fa-lg fa-fw fa-home"></i>
+                        <span class="menu-item-parent">Home 1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#home" title="Home">
                         <i class="fa fa-lg fa-fw fa-home"></i>
                         <span class="menu-item-parent">Home</span>
                     </a>
+                    <ul>
+                        <li>
+                            <a href="#" title="Home">
+                                <i class="fa fa-lg fa-fw fa-home"></i>
+                                <span class="menu-item-parent">Home</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="Home">
+                        <i class="fa fa-lg fa-fw fa-home"></i>
+                        <span class="menu-item-parent">Home</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="#" title="Home">
+                                <i class="fa fa-lg fa-fw fa-home"></i>
+                                <span class="menu-item-parent">Home</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </nav>
-        <span class="minifyme"> <i class="fa fa-arrow-circle-left hit"></i> </span>
+        <span class="minifyme" minifyme-menu-toggle> <i class="fa fa-arrow-circle-left hit"></i> </span>
 
     </aside>
     <!-- END NAVIGATION -->
@@ -181,6 +192,7 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-loading-bar/src/loading-bar.js"></script>
     <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <!-- endbower -->
@@ -191,7 +203,8 @@
     <script src="scripts/lib/notification/SmartNotification.min.js"></script>
 
     <!-- JARVIS WIDGETS -->
-    <script src="scripts/lib/smartwidgets/jarvis.widget.min.js"></script>
+    <script src="scripts/lib/smartwidgets/jarvis.widget.js"></script>
+    <script src="scripts/lib/smartwidgets/jarvis.menu.js"></script>
 
     <!-- EASY PIE CHARTS -->
     <script src="scripts/lib/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
@@ -217,9 +230,6 @@
     <!-- FastClick: For mobile devices -->
     <script src="scripts/lib/plugin/fastclick/fastclick.js"></script>
 
-    <!-- FastClick: For mobile devices -->
-    <script src="scripts/lib/smartadmin/app.js"></script>
-
     <!-- Flot Chart Plugin: Flot Engine, Flot Resizer, Flot Tooltip -->
     <script src="scripts/lib/plugin/flot/jquery.flot.cust.js"></script>
     <script src="scripts/lib/plugin/flot/jquery.flot.resize.js"></script>
@@ -233,26 +243,24 @@
     <script src="scripts/lib/plugin/fullcalendar/jquery.fullcalendar.min.js"></script>
 
     <!-- Full datatables -->
-    <script src="scripts/lib/plugin/datatables/jquery.dataTables-cust.min.js"></script>
     <script src="scripts/lib/plugin/datatables/ColReorder.min.js"></script>
     <script src="scripts/lib/plugin/datatables/FixedColumns.min.js"></script>
     <script src="scripts/lib/plugin/datatables/ColVis.min.js"></script>
     <script src="scripts/lib/plugin/datatables/ZeroClipboard.js"></script>
     <script src="scripts/lib/plugin/datatables/media/js/TableTools.min.js"></script>
     <script src="scripts/lib/plugin/datatables/DT_bootstrap.js"></script>
-
-    <script>
-    $(document).ready(function() {
-        pageSetUp();
-    });
-    </script>
-
     <!-- endbuild -->
 
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/home.js"></script>
+    <script src="scripts/directives/fullscreenToggle.js"></script>
+    <script src="scripts/directives/jarviswidget.js"></script>
+    <script src="scripts/directives/hidemenutoggle.js"></script>
+    <script src="scripts/directives/jarvismenu.js"></script>
+    <script src="scripts/directives/minifymemenutoggle.js"></script>
+    <script src="scripts/controllers/home2.js"></script>
     <!-- endbuild -->
 </body>
 </html>
