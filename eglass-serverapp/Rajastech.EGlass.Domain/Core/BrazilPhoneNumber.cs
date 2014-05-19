@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class BrazilPhoneNumber : IPhoneNumber
+    public class BrazilPhoneNumber : Entity<BrazilPhoneNumber, Guid>, IPhoneNumber
     {
         public string DDD { get; set; }
         public string Numero { get; set; }
@@ -16,5 +16,7 @@
         {
             throw new NotImplementedException();
         }
+
+        public string Type { get; set; }
     }
 }

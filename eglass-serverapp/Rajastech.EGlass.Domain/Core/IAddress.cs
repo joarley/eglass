@@ -3,8 +3,9 @@
     using System;
 using System.Collections.Generic;
 
-    public interface IAddress
+    public interface IAddress : IEntity
     {
         IEnumerable<string> GetAddressLines();
+        string Type { get; }
     }
 }
