@@ -6,8 +6,8 @@ angular.module('eglass-webapp')
       var params;
 
       try {
-        params = scope.$eval(attrs.jarvisMenu);        
-      } catch(ex){}
+        params = scope.$eval(attrs.jarvisMenu);
+      } catch(ex){ }
 
       if(!angular.isObject(params))
       {

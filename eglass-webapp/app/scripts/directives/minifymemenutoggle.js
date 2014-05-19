@@ -2,12 +2,11 @@
 
 angular.module('eglass-webapp')
   .directive('minifymeMenuToggle', function () {
-    function link(scope, element, attrs)
-    {
-    	element.click(function() {
-    		$('body').toggleClass("minified");
-			$(this).effect("highlight", {}, 500);
-		});
+    function link(scope, element) {
+      element.click(function() {
+        angular.element('body').toggleClass('minified');
+        angular.element(this).effect('highlight', {}, 500);
+      });
     }
 
     return {

@@ -11,7 +11,12 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/angular-loading-bar/src/loading-bar.css" />
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/datatables/media/css/jquery.dataTables.css" />
     <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/vendor.css -->
+    <link rel="stylesheet" href="bower_components/datatables-bootstrap3/BS3/assets/css/datatables.css" />
     <!-- endbuild -->
 
     <!-- build:css styles/smart.css -->
@@ -72,7 +77,7 @@
             <!-- multiple lang dropdown : find all flags in the image folder -->
             <ul class="header-dropdown-list hidden-xs">
                 <li>
-                    <a class="dropdown-toggle" data-toggle="dropdown"> 
+                    <a class="dropdown-toggle" data-toggle="dropdown">
                         <img alt="" src="images/flags/br.png">
                         <span> pt-BR </span>
                         <i class="fa fa-angle-down"></i>
@@ -193,9 +198,13 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-loading-bar/src/loading-bar.js"></script>
-    <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/datatables/media/js/jquery.dataTables.js"></script>
     <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor2.js -->
+    <script src="bower_components/datatables-bootstrap3/BS3/assets/js/datatables.js"></script>
     <!-- endbuild -->
 
     <!-- build:js scripts/smart.js -->
@@ -205,50 +214,6 @@
     <!-- JARVIS WIDGETS -->
     <script src="scripts/lib/smartwidgets/jarvis.widget.js"></script>
     <script src="scripts/lib/smartwidgets/jarvis.menu.js"></script>
-
-    <!-- EASY PIE CHARTS -->
-    <script src="scripts/lib/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
-
-    <!-- SPARKLINES -->
-    <script src="scripts/lib/plugin/sparkline/jquery.sparkline.min.js"></script>
-
-    <!-- JQUERY VALIDATE -->
-    <script src="scripts/lib/plugin/jquery-validate/jquery.validate.min.js"></script>
-
-    <!-- JQUERY MASKED INPUT -->
-    <script src="scripts/lib/plugin/masked-input/jquery.maskedinput.min.js"></script>
-
-    <!-- JQUERY SELECT2 INPUT -->
-    <script src="scripts/lib/plugin/select2/select2.min.js"></script>
-
-    <!-- JQUERY UI + Bootstrap Slider -->
-    <script src="scripts/lib/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
-
-    <!-- browser msie issue fix -->
-    <script src="scripts/lib/plugin/msie-fix/jquery.mb.browser.min.js"></script>
-
-    <!-- FastClick: For mobile devices -->
-    <script src="scripts/lib/plugin/fastclick/fastclick.js"></script>
-
-    <!-- Flot Chart Plugin: Flot Engine, Flot Resizer, Flot Tooltip -->
-    <script src="scripts/lib/plugin/flot/jquery.flot.cust.js"></script>
-    <script src="scripts/lib/plugin/flot/jquery.flot.resize.js"></script>
-    <script src="scripts/lib/plugin/flot/jquery.flot.tooltip.js"></script>
-
-    <!-- Vector Maps Plugin: Vectormap engine, Vectormap language -->
-    <script src="scripts/lib/plugin/vectormap/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="scripts/lib/plugin/vectormap/jquery-jvectormap-world-mill-en.js"></script>
-
-    <!-- Full Calendar -->
-    <script src="scripts/lib/plugin/fullcalendar/jquery.fullcalendar.min.js"></script>
-
-    <!-- Full datatables -->
-    <script src="scripts/lib/plugin/datatables/ColReorder.min.js"></script>
-    <script src="scripts/lib/plugin/datatables/FixedColumns.min.js"></script>
-    <script src="scripts/lib/plugin/datatables/ColVis.min.js"></script>
-    <script src="scripts/lib/plugin/datatables/ZeroClipboard.js"></script>
-    <script src="scripts/lib/plugin/datatables/media/js/TableTools.min.js"></script>
-    <script src="scripts/lib/plugin/datatables/DT_bootstrap.js"></script>
     <!-- endbuild -->
 
 
@@ -256,7 +221,6 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/home.js"></script>
     <script src="scripts/directives/fullscreenToggle.js"></script>
-    <script src="scripts/directives/jarviswidget.js"></script>
     <script src="scripts/directives/hidemenutoggle.js"></script>
     <script src="scripts/directives/jarvismenu.js"></script>
     <script src="scripts/directives/minifymemenutoggle.js"></script>

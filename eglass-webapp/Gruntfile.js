@@ -20,15 +20,16 @@ module.exports = function(grunt) {
   // Define the configuration for all the tasks
   grunt.initConfig({
     throttle: {
-        default: {
-            remote_port: 9000,
-            local_port: 9001,
-            upstream: 10*1024,
-            downstream: 100*1024,
-            keepalive: true
-        }
+      default: {
+        /* jshint ignore:start */
+        remote_port: 9000,
+        local_port: 9001,
+        /* jshint ignore:end */
+        upstream: 10*1024,
+        downstream: 100*1024,
+        keepalive: true
+      }
     },
-
 
     // Project settings
     yeoman: {
@@ -443,7 +444,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', [
     'newer:jshint',
-    'test',
+    //'test',
     'build'
   ]);
 };
