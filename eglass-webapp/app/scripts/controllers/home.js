@@ -2,7 +2,7 @@
 
 angular.module('eglass-webapp')
   .controller('homeCtrl', function($scope) {
-    $scope.nothing = undefined;
+    $scope.tableOptions = {'sPaginationType' : 'bootstrap_full'};
 
-    angular.element('#dt_basic').dataTable({'sPaginationType' : 'bs_full'});
+    
   });

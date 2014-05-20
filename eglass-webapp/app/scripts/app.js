@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('eglass-webapp', ['ngRoute', 'chieffancypants.loadingBar'])
+  .module('eglass-webapp', ['ngRoute', 'chieffancypants.loadingBar', 'ui.bootstrap'])
   .config(function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(false);
 

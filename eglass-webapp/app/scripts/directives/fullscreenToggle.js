@@ -15,14 +15,14 @@ angular.module('eglass-webapp')
     }
 
     function exitFullscreen() {
-      if($document.exitFullscreen) {
-        $document.exitFullscreen();
-      } else if($document.msExitFullscreen){
-        $document.msExitFullscreen();
-      } else if($document.mozCancelFullScreen) {
-        $document.mozCancelFullScreen();
-      } else if($document.webkitExitFullscreen) {
-        $document.webkitExitFullscreen();
+      if($document[0].exitFullscreen) {
+        $document[0].exitFullscreen();
+      } else if($document[0].msExitFullscreen){
+        $document[0].msExitFullscreen();
+      } else if($document[0].mozCancelFullScreen) {
+        $document[0].mozCancelFullScreen();
+      } else if($document[0].webkitExitFullscreen) {
+        $document[0].webkitExitFullscreen();
       }
     }
 
