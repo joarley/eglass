@@ -14,6 +14,7 @@ angular.module('eglass-webapp')
   		}
 	}
 
+<<<<<<< HEAD
 	function exitFullscreen() {
   		if(document.exitFullscreen) {
     		document.exitFullscreen();
@@ -23,6 +24,19 @@ angular.module('eglass-webapp')
     		document.webkitExitFullscreen();
   		}	
 	}
+=======
+    function exitFullscreen() {
+      if($document[0].exitFullscreen) {
+        $document[0].exitFullscreen();
+      } else if($document[0].msExitFullscreen){
+        $document[0].msExitFullscreen();
+      } else if($document[0].mozCancelFullScreen) {
+        $document[0].mozCancelFullScreen();
+      } else if($document[0].webkitExitFullscreen) {
+        $document[0].webkitExitFullscreen();
+      }
+    }
+>>>>>>> ceae2ec76c164f398ac7072692c9602b3de5fb4e
 
 	function link(scope, element, attrs)
 	{
