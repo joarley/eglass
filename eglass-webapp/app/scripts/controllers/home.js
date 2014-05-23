@@ -2,7 +2,14 @@
 
 angular.module('eglass-webapp')
   .controller('homeCtrl', function($scope) {
-    $scope.nothing = undefined;
+    pageSetUp();
 
-    angular.element('#dt_basic').dataTable({'sPaginationType' : 'bs_full'});
+    /*
+       * BASIC
+       */
+      $('#dt_basic').dataTable({
+        "sPaginationType" : "bootstrap_full"
+      });
+
+      /* END BASIC */
   });
