@@ -4,7 +4,7 @@
     using System;
 
     public class BrazilStoreLocalizedDetails : 
-        Entity<BrazilStoreLocalizedDetails, Guid>, IStoreLocalizedDetails
+        StoreLocalizedDetailsBase
     {
         public string RazaoSocial { get; set; }
         public string NomeFantasia { get; set; }

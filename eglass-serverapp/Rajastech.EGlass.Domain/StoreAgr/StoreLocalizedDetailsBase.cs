@@ -3,8 +3,8 @@
     using Rajastech.EGlass.Domain.Core;
     using System;
 
-    public interface IStoreLocalizedDetails : IEntity
+    public abstract class StoreLocalizedDetailsBase : Entity<StoreLocalizedDetailsBase, Guid>
     {
-        
+
     }
 }

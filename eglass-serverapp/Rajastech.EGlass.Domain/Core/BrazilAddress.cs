@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
 
-    public class BrazilAddress : Entity<BrazilAddress, Guid>, IAddress
+    public class BrazilAddress : AddressBase
     {
         public string Rua { get; set; }
         public string Numero { get; set; }
@@ -11,10 +11,8 @@
         public string Bairro { get; set; }
         public string Cidade { get; set; }
         public string CEP { get; set; }
-        public string Type { get; set; }
 
-
-        public IEnumerable<string> GetAddressLines()
+        public override IEnumerable<string> GetAddressLines()
         {
             throw new NotImplementedException();
         }

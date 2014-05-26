@@ -9,8 +9,8 @@
         public string Name { get; set; }
         public string Description { get; set; }
         public StoreType StoreType { get; set; }
-        public virtual ICollection<IAddress> Address { get; set; }
+        public virtual ICollection<AddressBase> Address { get; set; }
         public string Site { get; set; }
-        public virtual ICollection<IPhoneNumber> PhoneNumber { get; set; }
+        public virtual ICollection<PhoneNumberBase> PhoneNumber { get; set; }
     }
 }

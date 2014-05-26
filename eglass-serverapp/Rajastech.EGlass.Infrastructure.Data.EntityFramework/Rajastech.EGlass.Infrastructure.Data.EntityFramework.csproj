@@ -47,11 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mapping\AddressBaseMap.cs" />
     <Compile Include="Mapping\BrazilAddressMap.cs" />
+    <Compile Include="Mapping\StoreLocalizedDetailsBaseMap.cs" />
+    <Compile Include="Mapping\PhoneNumberBaseMap.cs" />
     <Compile Include="Mapping\BrazilPhoneNumberMap.cs" />
     <Compile Include="Mapping\BrazilStoreLocalizedDetailsMap.cs" />
     <Compile Include="Mapping\CountryMap.cs" />
     <Compile Include="Mapping\StoreMap.cs" />
+    <Compile Include="Migrations\201405201825075_teste.cs" />
+    <Compile Include="Migrations\201405201825075_teste.Designer.cs">
+      <DependentUpon>201405201825075_teste.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\DataBaseInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,6 +82,11 @@
       <Project>{09f76b07-f859-40aa-9061-3e596cb92b0b}</Project>
       <Name>Rajastech.EGlass.Infrastructure.Data.EntityFramework.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201405201825075_teste.resx">
+      <DependentUpon>201405201825075_teste.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

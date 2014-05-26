@@ -2,21 +2,19 @@
 {
     using System;
 
-    public class BrazilPhoneNumber : Entity<BrazilPhoneNumber, Guid>, IPhoneNumber
+    public class BrazilPhoneNumber : PhoneNumberBase
     {
         public string DDD { get; set; }
         public string Numero { get; set; }
 
-        public string GetFormatedNumber()
+        public override string GetFormatedNumber()
         {
             throw new NotImplementedException();
         }
 
-        public string GetFullPhoneNumber()
+        public override string GetFullPhoneNumber()
         {
             throw new NotImplementedException();
         }
-
-        public string Type { get; set; }
     }
 }
