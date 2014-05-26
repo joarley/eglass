@@ -11,6 +11,33 @@
 
   <!-- row -->
   <div class="row">
+    <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="jarviswidget">
+        <header>
+          <span class="widget-icon"> <i class="fa fa-table"></i> </span>
+          <h2>Standard Data Tables </h2>
+        </header>
+        <div>
+        <div class="widget-body">
+          
+          <tabset class="bordered">
+            <tab heading="Static title">Static content</tab>
+            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+              teste
+            </tab>
+            <tab select="alertMe()">
+              <tab-heading>
+                <i class="glyphicon glyphicon-bell"></i> Alert!
+              </tab-heading>
+              I've got an HTML heading, and a select callback. Pretty cool!
+            </tab>
+          </tabset>
+
+        </div>
+        </div>
+      </div>
+    </article>
+
 
     <!-- NEW WIDGET START -->
     <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -23,16 +50,16 @@
             <a href="#" class="button-icon jarviswidget-refresh-btn"><i class="fa fa-times fa-fw"></i></a>
           </div>
 
-          <ul class="nav nav-tabs pull-right in">
+          <ul class="nav nav-tabs pull-right in" headerTabWidget>
             <li class="active">
-              <a data-toggle="tab" href="#s1">
+              <a href="#s1">
                 <i class="fa fa-clock-o"></i>
                 <span class="hidden-mobile hidden-tablet">Live Stats</span>
               </a>
             </li>
 
             <li>
-              <a data-toggle="tab" href="#s2">
+              <a href="#s2">
                 <i class="fa fa-facebook"></i>
                 <span class="hidden-mobile hidden-tablet">Social Network</span>
               </a>
@@ -46,6 +73,8 @@
         <!-- widget content -->
           <div class="widget-body no-padding">
             <div class="tab-content">
+              
+
               <div id="s2" class="tab-pane">
                 teste
               </div>
@@ -94,7 +123,7 @@
   </article>
 
     <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <div class="jarviswidget jarviswidget-color-darken" jarviswidget>
+      <div class="jarviswidget jarviswidget-color-darken">
       <header>
         <span class="widget-icon"> <i class="fa fa-table"></i> </span>
         <h2>Standard Data Tables </h2>
