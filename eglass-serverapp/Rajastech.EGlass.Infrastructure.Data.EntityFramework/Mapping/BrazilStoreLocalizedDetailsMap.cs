@@ -1,41 +1,38 @@
-﻿using Rajastech.EGlass.Domain.StoreAgr;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Rajastech.EGlass.Infrastructure.Data.EntityFramework.Mapping
+﻿namespace Rajastech.EGlass.Infrastructure.Data.EntityFramework.Mapping
 {
+    using Rajastech.EGlass.Domain.StoreAgr;
+    using System.Data.Entity.ModelConfiguration;
+
     public class BrazilStoreLocalizedDetailsMap : EntityTypeConfiguration<BrazilStoreLocalizedDetails>
     {
         public BrazilStoreLocalizedDetailsMap()
         {
-            HasKey(x => x.Id)
-              .Property(x => x.Id)
-              .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            ToTable("BrazilStoreLocalizedDetails");
 
             Property(x => x.CNPJ)
+                .IsUnicode(true)
                 .IsRequired()
                 .HasMaxLength(255);
 
             Property(x => x.InscricaoEstadual)
-                .IsRequired()
+                .IsUnicode(true)
+                .IsOptional()
                 .HasMaxLength(255);
 
             Property(x => x.InscricaoMunicipal)
-           .IsRequired()
-           .HasMaxLength(255);
+                .IsUnicode(true)
+                .IsOptional()
+                .HasMaxLength(255);
 
             Property(x => x.NomeFantasia)
-           .IsRequired()
-           .HasMaxLength(255);
+                .IsUnicode(true)
+                .IsRequired()
+                .HasMaxLength(255);
 
             Property(x => x.RazaoSocial)
-           .IsRequired()
-           .HasMaxLength(255);
+                .IsUnicode(true)
+                .IsRequired()
+                .HasMaxLength(255);
         }
     }
 }

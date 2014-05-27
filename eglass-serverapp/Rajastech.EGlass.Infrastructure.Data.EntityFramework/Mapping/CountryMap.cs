@@ -14,7 +14,7 @@
 
             Property(x => x.CodeISOA2)
                 .IsRequired()
-                .HasMaxLength(255);
+                .HasMaxLength(10);
 
             Property(x => x.Name)
                 .IsRequired()

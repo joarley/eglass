@@ -8,6 +8,7 @@
     {
         public string Name { get; set; }
         public string Description { get; set; }
+        public virtual StoreLocalizedDetailsBase StoreLocalizedDetails { get; set; }
         public StoreType StoreType { get; set; }
         public virtual ICollection<AddressBase> Address { get; set; }
         public string Site { get; set; }

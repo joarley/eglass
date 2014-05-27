@@ -9,6 +9,6 @@
         TAggregateRoot Add(TAggregateRoot item);
         void Remove(TID id);
         TAggregateRoot Modify(TAggregateRoot item);
-        TAggregateRoot FindById(TAggregateRoot id);
+        TAggregateRoot FindById(TID id);
     }
 }

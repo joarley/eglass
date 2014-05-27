@@ -8,9 +8,7 @@
     {
         public BrazilAddressMap()
         {
-            HasKey(x => x.Id)
-                .Property(x => x.Id)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            ToTable("BrazilAddress");
 
             Property(x => x.Bairro)
                 .IsRequired()

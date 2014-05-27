@@ -14,6 +14,10 @@ namespace Rajastech.EGlass.Infrastructure.Data.EntityFramework.Mapping
         public StoreLocalizedDetailsBaseMap()
         {
             ToTable("StoreLocalizedDetails");
+
+            HasKey(x => x.Id)
+                .Property(x => x.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
         }
     }
 }
