@@ -1,8 +1,8 @@
-﻿namespace Rajastech.EGlass.Domain.Core
+﻿namespace Rajastech.EGlass.Domain.Core.Brazil
 {
     using System;
 
-    public class BrazilPhoneNumber : PhoneNumberBase
+    public class PhoneNumber : PhoneNumberBase
     {
         public string DDD { get; set; }
         public string Numero { get; set; }

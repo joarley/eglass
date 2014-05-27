@@ -28,7 +28,9 @@ namespace Rajastech.EGlass.Domain.Tests.Domain.Core
         {
             var item = new EntityClass();
 
+#pragma warning disable 1718
             Assert.IsTrue(item == item);
+#pragma warning restore 1718
         }
 
         [TestMethod]

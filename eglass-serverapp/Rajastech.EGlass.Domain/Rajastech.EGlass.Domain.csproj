@@ -40,10 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\BrazilAddress.cs" />
-    <Compile Include="Core\BrazilPhoneNumber.cs" />
+    <Compile Include="Core\Brazil\Address.cs" />
+    <Compile Include="Core\Brazil\PhoneNumber.cs" />
+    <Compile Include="Core\Brazil\IPhoneNumberServices.cs" />
     <Compile Include="Core\Country.cs" />
     <Compile Include="Core\AddressBase.cs" />
+    <Compile Include="Core\IPhoneNumberServiceFactory.cs" />
+    <Compile Include="Core\IPhoneNumberServices.cs" />
+    <Compile Include="Core\Brazil\ICEPServices.cs" />
     <Compile Include="Core\PhoneNumberBase.cs" />
     <Compile Include="Core\State.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

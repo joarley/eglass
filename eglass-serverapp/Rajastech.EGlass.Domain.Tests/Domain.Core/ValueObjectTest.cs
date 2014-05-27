@@ -10,8 +10,9 @@ namespace Rajastech.EGlass.Domain.Tests.Domain.Core
         public void test_equality_values()
         {
             var item = new ValueObjectClass(new object(), new object());
-
+#pragma warning disable 1718
             Assert.IsTrue(item == item);
+#pragma warning restore 1718
         }
 
         [TestMethod]

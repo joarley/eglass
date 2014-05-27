@@ -30,7 +30,7 @@
                 .IsRequired()
                 .HasMaxLength(255);
 
-            Property(x => x.Rua)
+            Property(x => x.Logradouro)
                 .IsRequired()
                 .HasMaxLength(255);
 

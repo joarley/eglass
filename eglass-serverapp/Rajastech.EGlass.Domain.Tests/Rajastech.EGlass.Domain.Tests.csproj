@@ -57,7 +57,9 @@
     <Compile Include="Domain.Core\EntityTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Core\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Rajastech.EGlass.Domain.Core\Rajastech.EGlass.Domain.Core.csproj">
       <Project>{2d4e4e4f-66e8-436d-a1ec-c879649dcda9}</Project>
