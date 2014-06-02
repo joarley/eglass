@@ -1,4 +1,4 @@
-﻿namespace Rajastech.EGlass.Domain.Core
+﻿namespace Rajastech.EGlass.Domain.StoreAgr
 {
     using System;
 

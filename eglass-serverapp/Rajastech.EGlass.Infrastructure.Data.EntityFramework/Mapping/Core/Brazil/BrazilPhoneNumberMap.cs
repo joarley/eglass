@@ -2,10 +2,11 @@
 {
     using Rajastech.EGlass.Domain.Core;
     using System.Data.Entity.ModelConfiguration;
+    using Rajastech.EGlass.Domain.Core.Brazil;
 
-    public class BrazilPhoneNumberMap : EntityTypeConfiguration<BrazilPhoneNumber>
+    public class PhoneNumberMap : EntityTypeConfiguration<PhoneNumber>
     {
-        public BrazilPhoneNumberMap()
+        public PhoneNumberMap()
         {
             ToTable("BrazilPhoneNumber");
 

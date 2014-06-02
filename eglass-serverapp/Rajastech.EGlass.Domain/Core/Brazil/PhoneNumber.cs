@@ -7,14 +7,15 @@
         public string DDD { get; set; }
         public string Numero { get; set; }
 
-        public override string GetFormatedNumber()
+        public override string GetFormatedNumber(Core.IPhoneNumberServices phoneNumberService)
         {
-            throw new NotImplementedException();
+            return phoneNumberService.FormatNumber(this);
         }
 
-        public override string GetFullPhoneNumber()
+        public override string GetFullPhoneNumber(Core.IPhoneNumberServices phoneNumberService)
         {
-            throw new NotImplementedException();
+            string codigoPais = phoneNumberService.GetCountryCode("pt-BR");
+            return codigoPais + DDD + Numero;
         }
     }
 }

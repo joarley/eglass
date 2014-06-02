@@ -49,7 +49,7 @@
     <Compile Include="Core\IPhoneNumberServices.cs" />
     <Compile Include="Core\Brazil\ICEPServices.cs" />
     <Compile Include="Core\PhoneNumberBase.cs" />
-    <Compile Include="Core\State.cs" />
+    <Compile Include="StoreAgr\State.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoreAgr\BrazilStoreLocalizedDetails.cs" />
     <Compile Include="StoreAgr\StoreLocalizedDetailsBase.cs" />

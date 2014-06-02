@@ -4,5 +4,6 @@
     {
         string ValidNumber(PhoneNumberBase number);
         string FormatNumber(PhoneNumberBase number);
+        string GetCountryCode(string countryISOCode);
     }
 }
