@@ -22,6 +22,10 @@
           
           <tabset class="bordered">
             <tab heading="Static title">Static content</tab>
+            <tab heading="Cliente">
+              <a href="#">link</a>
+            </tab>
+
             <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
               teste
             </tab>
