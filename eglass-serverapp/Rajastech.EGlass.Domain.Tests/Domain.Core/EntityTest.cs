@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Rajastech.EGlass.Domain.Core;
 
 namespace Rajastech.EGlass.Domain.Tests.Domain.Core
 {
@@ -52,11 +53,43 @@ namespace Rajastech.EGlass.Domain.Tests.Domain.Core
         }
 
         [TestMethod]
+        public void test_inequality_new_classes_same_id()
+        {
+            var item = new EntityClass() { Id = Guid.NewGuid() };
+            var item2 = new EntityClass() { Id = item.Id };
+
+            Assert.IsTrue(item == item2);
+        }
+
+        [TestMethod]
         public void test_equality_invalid_object()
         {
             var item = new EntityClass();
 
             Assert.IsFalse(item.Equals(new object()));
+        }
+
+        [TestMethod]
+        public void test_get_hash_code_transient_entity()
+        {
+            var item = new EntityClass();
+            var hash = item.GetHashCode();
+        }
+
+        [TestMethod]
+        public void test_get_hash_code_no_transient_entity()
+        {
+            var item = new EntityClass() { Id = Guid.NewGuid() };
+            var hash = item.GetHashCode();
+        }
+
+        [TestMethod]
+        public void test_get_id_entity_base()
+        {
+            var item = new EntityClass() { Id = Guid.NewGuid() };
+            var itemInteface = (IEntity)item;
+
+            Assert.IsTrue(item.Id == (Guid)itemInteface.Id);
         }
     }
 }

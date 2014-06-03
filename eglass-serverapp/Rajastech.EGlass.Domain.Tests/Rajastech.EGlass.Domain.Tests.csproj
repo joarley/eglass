@@ -51,6 +51,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Domain.Core\ValueObjectBlankClass.cs" />
     <Compile Include="Domain.Core\ValueObjectClass.cs" />
     <Compile Include="Domain.Core\EntityClass.cs" />
     <Compile Include="Domain.Core\ValueObjectTest.cs" />

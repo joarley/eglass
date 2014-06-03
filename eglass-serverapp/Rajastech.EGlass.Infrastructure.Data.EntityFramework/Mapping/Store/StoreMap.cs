@@ -1,4 +1,4 @@
-﻿namespace Rajastech.EGlass.Infrastructure.Data.EntityFramework.Mapping
+﻿namespace Rajastech.EGlass.Infrastructure.Data.EntityFramework.Mapping.Store
 {
     using Rajastech.EGlass.Domain.StoreAgr;
     using System.ComponentModel.DataAnnotations.Schema;

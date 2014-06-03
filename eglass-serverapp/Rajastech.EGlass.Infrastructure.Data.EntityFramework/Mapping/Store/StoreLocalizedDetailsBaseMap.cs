@@ -1,14 +1,9 @@
-﻿using Rajastech.EGlass.Domain.StoreAgr;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Rajastech.EGlass.Infrastructure.Data.EntityFramework.Mapping
+﻿namespace Rajastech.EGlass.Infrastructure.Data.EntityFramework.Mapping.Store
 {
+    using Rajastech.EGlass.Domain.StoreAgr;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.ModelConfiguration;
+
     public class StoreLocalizedDetailsBaseMap : EntityTypeConfiguration<StoreLocalizedDetailsBase>
     {
         public StoreLocalizedDetailsBaseMap()

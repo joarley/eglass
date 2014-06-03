@@ -1,4 +1,4 @@
-﻿namespace Rajastech.EGlass.Infrastructure.Data.EntityFramework.Mapping
+﻿namespace Rajastech.EGlass.Infrastructure.Data.EntityFramework.Mapping.Core.Brazil
 {
     using Rajastech.EGlass.Domain.Core;
     using System.Data.Entity.ModelConfiguration;

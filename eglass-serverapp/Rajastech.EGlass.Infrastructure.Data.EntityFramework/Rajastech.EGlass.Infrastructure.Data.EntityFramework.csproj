@@ -48,13 +48,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Mapping\Core\AddressBaseMap.cs" />
-    <Compile Include="Mapping\Core\Brazil\BrazilAddressMap.cs" />
-    <Compile Include="Mapping\StoreLocalizedDetailsBaseMap.cs" />
+    <Compile Include="Mapping\Core\Brazil\AddressMap.cs" />
+    <Compile Include="Mapping\Store\StoreLocalizedDetailsBaseMap.cs" />
     <Compile Include="Mapping\Core\PhoneNumberBaseMap.cs" />
-    <Compile Include="Mapping\Core\Brazil\BrazilPhoneNumberMap.cs" />
-    <Compile Include="Mapping\BrazilStoreLocalizedDetailsMap.cs" />
-    <Compile Include="Mapping\CountryMap.cs" />
-    <Compile Include="Mapping\StoreMap.cs" />
+    <Compile Include="Mapping\Core\Brazil\PhoneNumberMap.cs" />
+    <Compile Include="Mapping\Store\BrazilStoreLocalizedDetailsMap.cs" />
+    <Compile Include="Mapping\Core\CountryMap.cs" />
+    <Compile Include="Mapping\Store\StoreMap.cs" />
+    <Compile Include="Migrations\201406031803231_Initial.cs" />
+    <Compile Include="Migrations\201406031803231_Initial.Designer.cs">
+      <DependentUpon>201406031803231_Initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\DataBaseInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,7 +82,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Mapping\Store\" />
+    <EmbeddedResource Include="Migrations\201406031803231_Initial.resx">
+      <DependentUpon>201406031803231_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

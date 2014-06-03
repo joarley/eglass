@@ -1,4 +1,4 @@
-﻿namespace Rajastech.EGlass.Infrastructure.Data.EntityFramework.Mapping
+﻿namespace Rajastech.EGlass.Infrastructure.Data.EntityFramework.Mapping.Core
 {
     using Rajastech.EGlass.Domain.Core;
     using System.ComponentModel.DataAnnotations.Schema;

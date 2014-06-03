@@ -1,12 +1,11 @@
-﻿namespace Rajastech.EGlass.Infrastructure.Data.EntityFramework.Mapping
+﻿namespace Rajastech.EGlass.Infrastructure.Data.EntityFramework.Mapping.Core.Brazil
 {
-    using Rajastech.EGlass.Domain.Core;
-    using System.ComponentModel.DataAnnotations.Schema;
+    using Rajastech.EGlass.Domain.Core.Brazil;
     using System.Data.Entity.ModelConfiguration;
 
-    public class BrazilAddressMap : EntityTypeConfiguration<BrazilAddress>
+    public class AddressMap : EntityTypeConfiguration<Address>
     {
-        public BrazilAddressMap()
+        public AddressMap()
         {
             ToTable("BrazilAddress");
 
