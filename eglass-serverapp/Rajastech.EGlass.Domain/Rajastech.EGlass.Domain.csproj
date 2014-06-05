@@ -40,9 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Brazil\Address.cs" />
-    <Compile Include="Core\Brazil\PhoneNumber.cs" />
-    <Compile Include="Core\Brazil\IPhoneNumberServices.cs" />
+    <Compile Include="Core\Brazil\BrazilAddress.cs" />
+    <Compile Include="Core\Brazil\BrazilPhoneNumber.cs" />
+    <Compile Include="Core\Brazil\IBrazilPhoneNumberServices.cs" />
     <Compile Include="Core\Country.cs" />
     <Compile Include="Core\AddressBase.cs" />
     <Compile Include="Core\IPhoneNumberServiceFactory.cs" />

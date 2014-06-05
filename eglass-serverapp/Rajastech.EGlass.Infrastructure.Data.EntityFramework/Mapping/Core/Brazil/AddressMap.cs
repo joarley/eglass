@@ -3,7 +3,7 @@
     using Rajastech.EGlass.Domain.Core.Brazil;
     using System.Data.Entity.ModelConfiguration;
 
-    public class AddressMap : EntityTypeConfiguration<Address>
+    public class AddressMap : EntityTypeConfiguration<BrazilAddress>
     {
         public AddressMap()
         {

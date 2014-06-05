@@ -2,7 +2,7 @@
 {
     public interface IPhoneNumberServices
     {
-        string ValidNumber(PhoneNumberBase number);
+        bool ValidNumber(PhoneNumberBase number);
         string FormatNumber(PhoneNumberBase number);
         string GetCountryCode(string countryISOCode);
     }

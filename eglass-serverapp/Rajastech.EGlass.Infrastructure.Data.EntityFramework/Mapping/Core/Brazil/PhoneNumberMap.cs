@@ -4,7 +4,7 @@
     using System.Data.Entity.ModelConfiguration;
     using Rajastech.EGlass.Domain.Core.Brazil;
 
-    public class PhoneNumberMap : EntityTypeConfiguration<PhoneNumber>
+    public class PhoneNumberMap : EntityTypeConfiguration<BrazilPhoneNumber>
     {
         public PhoneNumberMap()
         {

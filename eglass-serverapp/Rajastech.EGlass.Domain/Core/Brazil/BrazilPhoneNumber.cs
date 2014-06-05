@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class PhoneNumber : PhoneNumberBase
+    public class BrazilPhoneNumber : PhoneNumberBase
     {
         public string DDD { get; set; }
         public string Numero { get; set; }

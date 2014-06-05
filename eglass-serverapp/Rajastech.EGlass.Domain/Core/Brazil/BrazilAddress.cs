@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
 
-    public class Address : AddressBase
+    public class BrazilAddress : AddressBase
     {
         public string Logradouro { get; set; }
         public string Numero { get; set; }
