@@ -17,7 +17,7 @@ $.fn.extend({
 
 		//add a mark [+] to a multilevel menu
 		$this.find("li").each(function() {
-			if ($(this).find("ul").size() != 0) {
+			if ($(this).find("ul").size() !== 0) {
 				//add the multilevel sign next to the link
 				$(this).find("a:first").append("<b class='collapse-sign'>" + opts.closedSign + "</b>");
 
@@ -34,12 +34,12 @@ $.fn.extend({
 		$this.find("li.active").each(function() {
 			$(this).parents("ul").slideDown(opts.speed);
 			$(this).parents("ul").parent("li").find("b:first").html(opts.openedSign);
-			$(this).parents("ul").parent("li").addClass("open")
+			$(this).parents("ul").parent("li").addClass("open");
 		});
 
 		$this.find("li a").click(function() {
 
-			if ($(this).parent().find("ul").size() != 0) {
+			if ($(this).parent().find("ul").size() !== 0) {
 
 				if (opts.accordion) {
 					//Do nothing when the list is open
@@ -83,5 +83,3 @@ $.fn.extend({
 		});
 	} // end function
 });
-
-/* ~ END: CUSTOM MENU PLUGIN */

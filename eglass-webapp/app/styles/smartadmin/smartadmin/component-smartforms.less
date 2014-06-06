@@ -272,7 +272,7 @@
 			opacity: 1;
 		}
 		.smart-form .inline-group {
-			margin: 0 -30px -4px 0;
+			margin: 0 -15px -4px 0;
 		}
 		.smart-form .inline-group:after {
 			content: '';
@@ -1026,3 +1026,37 @@
 			height: 11px;
 			top: 17px;
 		}	
+		
+		/* aep fix for aspnet mvc
+		   from abelepereira  */
+        .smart-form .checkbox input + input[type=hidden] + i:after {
+                content: '\f00c';
+                top: -1px;
+                left: 1px;
+                width: 15px;
+                height: 15px;
+                font: normal 16px/19px FontAwesome;
+                text-align: center;
+        }
+
+        .smart-form .checkbox input:checked:hover + input[type=hidden] +i:after {
+                content: '\f00d';
+        }
+
+        .smart-form .checkbox input:checked:disabled:hover + input[type=hidden] + i:after {
+                content: '\f00c';
+        }
+
+        .smart-form .checkbox input:checked + input[type=hidden] + i:after {
+                opacity: 1;
+        }
+
+		/* toogle fix */
+        .smart-form .toggle input:checked + input[type=hidden] + i:after {
+                content: attr(data-swchon-text);
+                text-align: right;
+        }
+        .smart-form .toggle input:checked + input[type=hidden] + i:before {
+                right: 36px;
+        }
+        /* end of fix */

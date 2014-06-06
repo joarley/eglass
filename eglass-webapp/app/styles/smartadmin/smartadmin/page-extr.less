@@ -1,5 +1,5 @@
 /*
- * LOGIN/REGISTER PAGE
+ * LOGIN/REGISTER/EXTR PAGE
  */
 
 .display-image {
@@ -12,15 +12,15 @@
 	overflow:auto;
 }
 
-#login {
+#extr-page {
 	background:@white;
 	overflow:visible;
 }
-#login .container {
+#extr-page .container {
 	border:none;
 }
 
-#login #header {
+#extr-page #header {
 	margin:0;
 	height: 71px;
 	border-bottom: 1px solid @gray-lighter !important;
@@ -30,20 +30,23 @@
 	border-width: 0;
 	min-height: 28px;
 	background: @gray-lightest !important;
-	margin-bottom:20px;
-	
+	/*margin-bottom:20px;*/
 }
 
-#login #header #logo {
+#extr-page #main {
+	padding-top:20px;
+}
+
+#extr-page #header #logo {
 	margin-top:22px;
 	margin-left:0px;
 }	
 	
-#login #header #logo img {
+#extr-page #header #logo img {
 	width:137px;
 }
 
-#login-header-space {
+#extr-page-header-space {
 	float:right;
 	text-align:right;
 	display:block;
@@ -51,28 +54,28 @@
 	line-height:71px;
 }	
 
-#login-header-space >:first-child {
+#extr-page-header-space >:first-child {
 	font-size: 13px;
 	margin-right: 14px;
 	vertical-align: -3px;
 	font-weight:400;
 }
 
-#login-header-space .btn {
+#extr-page-header-space .btn {
 	font-weight:bold;
 	text-transform: uppercase;
 }
 
-#login-header-space > * {
+#extr-page-header-space > * {
 	display:inline-block;
 }
 
-#login #main {
+#extr-page #main {
 	background:@white;
 	margin:0;
 }
 
-#login .hero {
+#extr-page .hero {
 	background-image: url("@{base-url}/gradient/login.png");
 	background-repeat: no-repeat;
 	background-position: 0 137px;
@@ -81,7 +84,7 @@
 	float:left;
 }
 
-#login h4.paragraph-header {
+#extr-page h4.paragraph-header {
 	color: #565656;
 	font-size: 15px;
 	font-weight: normal;
@@ -90,7 +93,7 @@
 	width: 270px;
 }
 
-#login h5.about-heading {
+#extr-page h5.about-heading {
 	color: #565656;
 	font-size: 15px;
 	font-weight: bold;
@@ -98,16 +101,16 @@
 	margin: 0 0 5px;
 }
 
-#login .login-header-big {
+#extr-page .login-header-big {
 	font-weight:400;
 }
 
-#login .login-desc-box-l{
+#extr-page .login-desc-box-l{
 	min-height:350px;
 	width: 50%;
 }
 
-#login .login-app-icons {
+#extr-page .login-app-icons {
 	vertical-align: top;
 	margin-top: 90px;
 	width: 300px;
@@ -116,21 +119,21 @@
 
 
 @media (min-width: 768px) and (max-width: 880px) {
-	#login #header {
+	#extr-page #header {
 		padding: 0 5px !important;
 	}
 }
 
 @media only screen and (min-width: 0px) and (max-width: 679px) {
-	#login #header {
+	#extr-page #header {
 		padding: 0 5px !important;
 	}	
 	
-	#login #header #logo img {
+	#extr-page #header #logo img {
 		width: 135px;
 	}
 	
-	#login #header #logo {
+	#extr-page #header #logo {
 		margin-top: 22px;
 	}
 }
