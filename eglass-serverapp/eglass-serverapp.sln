@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Distributed Services", "1-Distributed Services", "{D5EFC0CB-7F70-47F2-BD5F-5B3F2DBF82E9}"
 EndProject
@@ -44,6 +44,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rajastech.EGlass.Infrastructure.CrossCutting.NetFramework", "Rajastech.EGlass.Infrastructure.CrossCutting.NetFramework\Rajastech.EGlass.Infrastructure.CrossCutting.NetFramework.csproj", "{E46C1197-F6C7-4632-8A84-1B4461919127}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rajastech.EGlass.Infrastructure.Data.EntityFramework", "Rajastech.EGlass.Infrastructure.Data.EntityFramework\Rajastech.EGlass.Infrastructure.Data.EntityFramework.csproj", "{97F5B89E-E2AD-491A-86EF-708E9101F91C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0-Modeling", "0-Modeling", "{6C5FEAA7-1A98-407E-BB69-388B8D103215}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "EGlass", "EGlass\EGlass.modelproj", "{DAC6B47B-C709-4B08-8557-8A5C6C981ABB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,6 +111,10 @@ Global
 		{97F5B89E-E2AD-491A-86EF-708E9101F91C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97F5B89E-E2AD-491A-86EF-708E9101F91C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97F5B89E-E2AD-491A-86EF-708E9101F91C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAC6B47B-C709-4B08-8557-8A5C6C981ABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAC6B47B-C709-4B08-8557-8A5C6C981ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAC6B47B-C709-4B08-8557-8A5C6C981ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAC6B47B-C709-4B08-8557-8A5C6C981ABB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -129,5 +137,6 @@ Global
 		{41497E70-C03F-4C94-A58F-99D0B34A66A8} = {21704D23-3F21-4580-B7B8-FFB7F98529E8}
 		{E46C1197-F6C7-4632-8A84-1B4461919127} = {21704D23-3F21-4580-B7B8-FFB7F98529E8}
 		{095B9F1B-DFBD-49FB-9A9F-9C7E9C50B259} = {4753CDB1-9868-43E0-A649-BB8A092BBB0B}
+		{DAC6B47B-C709-4B08-8557-8A5C6C981ABB} = {6C5FEAA7-1A98-407E-BB69-388B8D103215}
 	EndGlobalSection
 EndGlobal

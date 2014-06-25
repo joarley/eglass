@@ -1,1 +1,5 @@
+#Merge backup files
+*.orig
+
+#temp file visio
 *.~vsdx

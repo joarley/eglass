@@ -1,11 +1,7 @@
 'use strict';
 
 angular
-<<<<<<< HEAD
-  .module('eglass-webapp', ['ngRoute'])
-=======
   .module('eglass-webapp', ['ngRoute', 'chieffancypants.loadingBar', 'ui.bootstrap'])
->>>>>>> ceae2ec76c164f398ac7072692c9602b3de5fb4e
   .config(function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(false);
 
@@ -14,7 +10,58 @@ angular
         templateUrl: 'views/home.html',
         controller: 'homeCtrl'
       })
+      .when('/home2', {
+        templateUrl: 'views/home2.html',
+        controller: 'Home2Ctrl'
+      })
       .otherwise({
         redirectTo: '/home'
       });
   });
+
+
+/*
+* NAV OR #LEFT-BAR RESIZE DETECT
+* Description: changes the page min-width of #CONTENT and NAV when navigation is resized.
+* This is to counter bugs for min page width on many desktop and mobile devices.
+* Note: This script uses JSthrottle technique so don't worry about memory/CPU usage
+*/
+
+// Fix page and nav height
+function nav_page_height() {
+  var setHeight = $('#main').height();
+  //menuHeight = $.left_panel.height();
+  
+  var windowHeight = $(window).height() - $.navbar_height;
+  //set height
+
+  if (setHeight > windowHeight) {// if content height exceedes actual window height and menuHeight
+    $.left_panel.css('min-height', setHeight + 'px');
+    $.root_.css('min-height', setHeight + $.navbar_height + 'px');
+
+  } else {
+    $.left_panel.css('min-height', windowHeight + 'px');
+    $.root_.css('min-height', windowHeight + 'px');
+  }
+}
+
+$(document).ready(function(){
+$('#main').resize(function() {
+  nav_page_height();
+  check_if_mobile_width();
+})
+
+$('nav').resize(function() {
+  nav_page_height();
+})
+
+function check_if_mobile_width() {
+  if ($(window).width() < 979) {
+    $.root_.addClass('mobile-view-activated')
+  } else if ($.root_.hasClass('mobile-view-activated')) {
+    $.root_.removeClass('mobile-view-activated');
+  }
+}
+});
+
+/* ~ END: NAV OR #LEFT-BAR RESIZE DETECT */

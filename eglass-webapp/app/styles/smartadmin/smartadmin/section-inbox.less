@@ -12,10 +12,12 @@
 	padding:10px 14px 7px; 
 	position:relative;
 	margin-left:200px;
+	overflow-x:hidden;
 }
 .inbox-body.no-content-padding {
 	margin-top:0;
 	background:@white;
+	overflow:hidden;
 }
 	
 .inbox-nav-bar {
@@ -36,13 +38,8 @@
 }
 	
 .inbox-footer {
-	height: 52px;
-	padding: 15px 14px 0;
-	border-top: 1px solid #CECECE;
-	background: @asideColor-start;
 	position: absolute;
 	bottom: -53px;
-	width: 100%;
 }
 .inbox-paging {
 	margin-left:10px;
@@ -167,6 +164,14 @@
 	display:block; 
 	width:200px; 
 	padding: 10px 0 10px 14px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+	
+}
+
+.inbox-side-bar::-webkit-scrollbar {
+    width:0!important
 }
 	
 .inbox-side-bar h6 {
@@ -386,6 +391,12 @@
 	padding-left:10px;
 	margin-left:50px;
 	color:#A9A9A9;
+}
+
+/* reply text area */
+	
+.inbox-body .note-editor .note-editable	{
+	height: 100% important;
 }
 	
 .email-reply-text >:first-child {

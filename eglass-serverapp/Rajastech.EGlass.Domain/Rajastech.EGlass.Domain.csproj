@@ -40,15 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\BrazilAddress.cs" />
-    <Compile Include="Core\BrazilPhoneNumber.cs" />
+    <Compile Include="Core\Brazil\BrazilAddress.cs" />
+    <Compile Include="Core\Brazil\BrazilPhoneNumber.cs" />
+    <Compile Include="Core\Brazil\IBrazilPhoneNumberServices.cs" />
     <Compile Include="Core\Country.cs" />
-    <Compile Include="Core\IAddress.cs" />
-    <Compile Include="Core\IPhoneNumber.cs" />
-    <Compile Include="Core\State.cs" />
+    <Compile Include="Core\AddressBase.cs" />
+    <Compile Include="Core\IPhoneNumberServiceFactory.cs" />
+    <Compile Include="Core\IPhoneNumberServices.cs" />
+    <Compile Include="Core\Brazil\ICEPServices.cs" />
+    <Compile Include="Core\PhoneNumberBase.cs" />
+    <Compile Include="StoreAgr\State.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoreAgr\BrazilStoreLocalizedDetails.cs" />
-    <Compile Include="StoreAgr\IStoreLocalizedDetails.cs" />
+    <Compile Include="StoreAgr\StoreLocalizedDetailsBase.cs" />
     <Compile Include="StoreAgr\IStoreRepository.cs" />
     <Compile Include="StoreAgr\Store.cs" />
     <Compile Include="StoreAgr\StoreType.cs" />

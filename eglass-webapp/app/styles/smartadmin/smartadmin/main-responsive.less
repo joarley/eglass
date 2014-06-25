@@ -1,9 +1,23 @@
-
 /*
  * GENERAL MOBILE (Applies to all resolutions below 979px)
  */
 	
 @media (max-width: 979px) {
+	
+	/* mobile lock x-scroll for menu */
+	html.hidden-menu-mobile-lock {
+		overflow-x:hidden;
+	}
+	
+	/* Force content to spread 100% */
+	#main {
+		width:100% !important;
+	}
+
+	/* Footer */
+	.page-footer {
+		padding: 15px 14px 0;
+	}
 
 	/* Profile Page */
 	.profile-pic>img {
@@ -35,6 +49,7 @@
 	
 	body.container {
 		border:none !important;
+		width:100% !important;
 	}
 	
 	.inbox-data-message > :first-child {
@@ -56,6 +71,8 @@
 	
 	.inbox-body .table-wrap {
 		padding:0px !important;
+		padding-left:5px !important;
+		padding-right:5px !important;
 	}
 	
 	.inbox-nav-bar {
@@ -86,6 +103,21 @@
 		display:none !important;
 	}
 
+	.jarviswidget header h2 {
+		width:310px;
+		text-overflow:ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	
+	/* dropzone image fix */
+	.dropzone .dz-default.dz-message {
+		background-size: 100%;
+		width: 200px;
+		height: 43px;
+		margin-left: -112px;
+		margin-top: -23.5px;
+	}
 
 }
 
@@ -146,9 +178,17 @@
 	
 	.hidden-menu.fixed-ribbon #ribbon {
 		left: @asideWidth;
+		width:100%;
 	}
 	.fixed-ribbon #ribbon {
 		left: 0px;
+	}
+
+	.jarviswidget header h2 {
+		width:200px;
+		text-overflow:ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
 	}
 	
 	/*
@@ -168,9 +208,13 @@
 	#main::after {
 		/*content: "IPAD VERTICAL";*/
 	}
+	
 	#main {
 		margin-left: 0;
+		overflow-x:hidden;
 	}
+	
+	
 	#left-panel {
 		left: -@asideWidth;
 	}
@@ -236,9 +280,17 @@
 
 	.hidden-menu.fixed-ribbon #ribbon {
 		left: @asideWidth;
+		width:100%;
 	}
 	.fixed-ribbon #ribbon {
 		left: 0px;
+	}
+
+	.jarviswidget header h2 {
+		width:180px;
+		text-overflow:ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
 	}
 	
 	/*
@@ -267,6 +319,7 @@
 	}
 	#main {
 		margin-left: 0px;
+		overflow-x:hidden;
 	}
 	#left-panel {
 		left: -@asideWidth;
@@ -357,14 +410,19 @@
 	
 	.hidden-menu.fixed-ribbon #ribbon {
 		left: @asideWidth;
+		width:100%;
 	}
 	.fixed-ribbon #ribbon {
 		left: 0px;
 	}
 	
-	.fixed-navigation #left-panel {
+	/*.fixed-navigation #left-panel {
 		position:absolute !important;
-	}		
+	}*/		
+
+	body.fixed-navigation.hidden-menu {
+		overflow:hidden !important;
+	}
 
 	/*
 	 * fixed ribbon
@@ -421,9 +479,11 @@
 		display:block;
 	}	
 
-	/* project info is not needed at this width */
-	#project-context {
-		display:none;
+	.jarviswidget header h2 {
+		width:250px;
+		text-overflow:ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
 	}
 	
 }
@@ -443,6 +503,7 @@
 	}
 	#main {
 		margin-left: 0;
+		overflow-x:hidden;		
 	}
 	#left-panel {
 		left: -@asideWidth;
@@ -552,6 +613,7 @@
 
 	.hidden-menu.fixed-ribbon #ribbon {
 		left: @asideWidth;
+		width:100%;
 	}
 	.fixed-ribbon #ribbon {
 		left: 0px;
@@ -605,13 +667,16 @@
 		display:block;
 	}
 	
-	/* project info is not needed at this width */
-	#project-context {
-		display:none !important;
-	}
 	
 	.hidden-tablet {
 		display:none !important;
+	}
+	
+	.jarviswidget header h2 {
+		width:300px;
+		text-overflow:ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
 	}
 }
 
@@ -619,6 +684,12 @@
  * IPHONE
  */
 @media only screen and (min-width: 320px) and (max-width: 479px) {
+	
+	/* Hide headings on phones as its not needed*/
+	
+	.page-title {
+		display:none;
+	}
 	
 	/* Profile Page */
 	.profile-pic {
@@ -647,6 +718,7 @@
 	}
 	#main {
 		margin-left: 0;
+		overflow-x:hidden;		
 	}
 	#left-panel {
 		left: -@asideWidth;
@@ -723,11 +795,6 @@
 	#sparks li {
 		padding: 0 10px 0 20px;
 	}
-	
-	/* project content */
-	#project-context {
-		display:none !important;
-	}
 		
 	/* responsive menu button */
 	#hide-menu > :first-child > a, .btn-header a {
@@ -783,14 +850,10 @@
 
 	.hidden-menu.fixed-ribbon #ribbon {
 		left: @asideWidth;
+		width:100%;
 	}
 	.fixed-ribbon #ribbon {
 		left: 0px;
-	}
-	
-	/* project info is not needed at this width */
-	#project-context {
-		display:none;
 	}
 	
 	/* #*$^& Bootstrap 3 ! */

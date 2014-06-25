@@ -14,6 +14,8 @@
         {
         }
 
+        public EntityFrameworkUnitOfWork() { }
+
         public IDbSet<T> Entities<T>() where T : class
         {
             return Set<T>();

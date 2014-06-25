@@ -1,0 +1,3 @@
+Generate new Migration
+add-migration {NAME} -startupprojectname Rajastech.EGlass.DistributedServices.WebAPI -connectionstringname {Connection String Name}
+

@@ -51,7 +51,25 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Domain.Core\ValueObjectBlankClass.cs" />
+    <Compile Include="Domain.Core\ValueObjectClass.cs" />
+    <Compile Include="Domain.Core\EntityClass.cs" />
+    <Compile Include="Domain.Core\ValueObjectTest.cs" />
+    <Compile Include="Domain.Core\EntityTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rajastech.EGlass.Domain.Core\Rajastech.EGlass.Domain.Core.csproj">
+      <Project>{2d4e4e4f-66e8-436d-a1ec-c879649dcda9}</Project>
+      <Name>Rajastech.EGlass.Domain.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rajastech.EGlass.Domain\Rajastech.EGlass.Domain.csproj">
+      <Project>{21d1e75e-888d-4a33-8af3-4be768e0542c}</Project>
+      <Name>Rajastech.EGlass.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
