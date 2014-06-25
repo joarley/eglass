@@ -10,8 +10,8 @@
         public string Description { get; set; }
         public virtual StoreLocalizedDetailsBase StoreLocalizedDetails { get; set; }
         public StoreType StoreType { get; set; }
-        public virtual ICollection<AddressBase> Address { get; set; }
+        public virtual ICollection<AddressBase> Addresses { get; set; }
         public string Site { get; set; }
-        public virtual ICollection<PhoneNumberBase> PhoneNumber { get; set; }
+        public virtual ICollection<PhoneNumberBase> PhoneNumbers { get; set; }
     }
 }

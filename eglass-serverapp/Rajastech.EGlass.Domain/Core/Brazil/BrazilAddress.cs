@@ -13,18 +13,13 @@
         public string Estado { get; set; }
         public string CEP { get; set; }
 
-        public string GetFormatedCEP(ICEPServices cepService)
-        {
-            return cepService.FormatCEP(this.CEP);
-        }
-
-        public override IEnumerable<string> GetAddressLines()
+        public override IEnumerable<string> GetAddressLines(ICEPServices cepService)
         {
             yield return string.Format("{0}, {1} {2}",
                 this.Logradouro, this.Numero, this.Complemento); //Line 1
             yield return this.Bairro; //Line 2
             yield return this.Cidade + " - " + this.Estado; //Line 3
-            yield return this.CEP; //line 4
+            yield return cepService.FormatCEP(this.CEP); //line 4
         }
     }
 }
