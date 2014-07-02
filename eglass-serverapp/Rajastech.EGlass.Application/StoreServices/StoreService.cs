@@ -1,15 +1,12 @@
 ﻿namespace Rajastech.EGlass.Application.StoreServices
 {
+    using Rajastech.EGlass.Application.Core;
     using Rajastech.EGlass.Application.DTO.StoreDTOs;
     using Rajastech.EGlass.Domain.StoreAgr;
     using Rajastech.EGlass.Infrastructure.CrossCutting.TypeAdapter;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Rajastech.EGlass.Application.Core;
     using Rajastech.EGlass.Infrastructure.CrossCutting.Validation;
+    using System;
+    using System.Linq;
 
     public class StoreService
     {
@@ -24,8 +21,8 @@
 
             Store newStore = new Store()
             {
-                Description = newStoreDto.Description,
                 Name = newStoreDto.Name,
+                Description = newStoreDto.Description,
                 StoreType = (StoreType)newStoreDto.StoreType
             };
 
