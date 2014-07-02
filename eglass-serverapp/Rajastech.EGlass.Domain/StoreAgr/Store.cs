@@ -12,6 +12,7 @@
         public StoreType StoreType { get; set; }
         public virtual ICollection<AddressBase> Addresses { get; set; }
         public string Site { get; set; }
+        public StoreState State { get; set; }
         public virtual ICollection<PhoneNumberBase> PhoneNumbers { get; set; }
 
         public void Disable()

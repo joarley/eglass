@@ -2,7 +2,7 @@
 {
     using System;
 
-    public enum State
+    public enum StoreState
     {
         Activated,
         Deactivated
