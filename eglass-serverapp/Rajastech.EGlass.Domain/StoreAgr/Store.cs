@@ -13,5 +13,10 @@
         public virtual ICollection<AddressBase> Addresses { get; set; }
         public string Site { get; set; }
         public virtual ICollection<PhoneNumberBase> PhoneNumbers { get; set; }
+
+        public void Disable()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

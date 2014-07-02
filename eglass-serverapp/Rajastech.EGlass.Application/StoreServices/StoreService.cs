@@ -9,16 +9,41 @@
     using System.Text;
     using System.Threading.Tasks;
     using Rajastech.EGlass.Application.Core;
+    using Rajastech.EGlass.Infrastructure.CrossCutting.Validation;
 
     public class StoreService
     {
-        ITypeAdapterFactory typwAdapterFactory;
+        ITypeAdapterFactory typeAdapterFactory;
+        IValidationFactory validationFactory;
+        IStoreRepository storeRepository;
 
-        public StoreAbstractDTO Add(StoreAddDTO newStoreDto)
+        public StoreAbstractDTO AddStore(StoreAddDTO newStoreDto)
         {
-            Store newStore = new Store();
+            if (!Enum.IsDefined(typeof(StoreType), newStoreDto.StoreType))
+                throw new Exception();
 
-            return newStore.ProjectedAs<StoreAbstractDTO>(typwAdapterFactory.Create());
+            Store newStore = new Store()
+            {
+                Description = newStoreDto.Description,
+                Name = newStoreDto.Name,
+                StoreType = (StoreType)newStoreDto.StoreType
+            };
+
+            var validation = validationFactory.Create<Store>();
+            var validationResult = validation.Validate(newStore);
+            if (validationResult.Any())
+                throw new Exception();
+
+            storeRepository.Add(newStore);
+
+            return newStore.ProjectedAs<StoreAbstractDTO>(typeAdapterFactory.Create());
+        }
+
+        public void DisableStore(Guid id)
+        {
+            var store = storeRepository.FindById(id);
+            store.Disable();
+            storeRepository.Modify(store);
         }
     }
 }
