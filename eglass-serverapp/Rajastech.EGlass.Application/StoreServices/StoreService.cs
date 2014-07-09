@@ -18,6 +18,7 @@
         private readonly IAddressServiceFactory addressServiceFactory;
         private readonly IStoreLocalizedDetailsServiceFactory storeLocalizedDetailsServiceFactory;
         private readonly IStoreRepository storeRepository;
+        private readonly IPhoneNumberServiceFactory phoneNumberServiceFactory;
 
         public StoreAbstractDTO AddStore(StoreAddDTO newStoreDto)
         {
@@ -48,6 +49,14 @@
                 var addressService = addressServiceFactory.Create(addressDto.CountryCodeISOA2);
                 var address = addressService.CreateFrom((AddressBaseDto)addressDto.Content);
                 newStore.Addresses.Add(address);
+            }
+
+            //Create store phone numbers
+            foreach (var phoneNumberDto in newStoreDto.PhoneNumbers)
+            {
+                var phoneNumbersService = phoneNumberServiceFactory.Create(phoneNumberDto.CountryCodeISOA2);
+                var phoneNumber = phoneNumbersService.CreateFrom((PhoneNumberBaseDto)phoneNumberDto.Content);
+                newStore.PhoneNumbers.Add(phoneNumber);
             }
 
             var validation = validationFactory.Create<Store>();
