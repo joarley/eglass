@@ -1,4 +1,4 @@
-﻿namespace Rajastech.EGlass.Application
+﻿namespace Rajastech.EGlass.Application.DTO.Common
 {
     using System;
     using System.Collections.Generic;
@@ -6,7 +6,7 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    public class LocalizedContentDTO
+    public class LocalizedContentDto
     {
         public string CountryCodeISOA2 { get; set; }
         public object Content { get; set; }

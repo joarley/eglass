@@ -4,7 +4,7 @@
 
     public class ValidationResult
     {
-        public Guid ErrorId { get; set; }
-        public Guid Message { get; set; }
+        public string Code { get; set; }
+        public string Message { get; set; }
     }
 }

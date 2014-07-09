@@ -39,6 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exception\InvalidCredentialsException.cs" />
+    <Compile Include="Exception\InsufficientePermissionException.cs" />
+    <Compile Include="Exception\ValidateException.cs" />
     <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\ILoggerFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

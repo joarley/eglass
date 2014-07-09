@@ -13,7 +13,7 @@ namespace Rajastech.EGlass.Application.DTO.StoreDTOs
         public string Description { get; set; }
         public int StoreType { get; set; }
         public string Site { get; set; }
-        public LocalizedContentDTO StoreLocalizedDetails { get; set; }
-        public IEnumerable<LocalizedContentDTO> Addresses { get; set; }
+        public LocalizedContentDto StoreLocalizedDetails { get; set; }
+        public IEnumerable<LocalizedContentDto> Addresses { get; set; }
     }
 }

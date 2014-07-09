@@ -33,11 +33,11 @@
             Property(x => x.StoreType)
                 .IsRequired();
 
-            HasMany(x => x.Address)
+            HasMany(x => x.Addresses)
                 .WithMany()
                 .Map(x => x.ToTable("Store_Address").MapRightKey("Address_Id"));
 
-            HasMany(x => x.PhoneNumber)
+            HasMany(x => x.PhoneNumbers)
                 .WithMany()
                 .Map(x => x.ToTable("Store_PhoneNumber").MapRightKey("PhoneNumber_Id"));
         }

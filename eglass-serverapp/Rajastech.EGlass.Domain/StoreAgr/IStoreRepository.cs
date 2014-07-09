@@ -1,12 +1,8 @@
-﻿using Rajastech.EGlass.Domain.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Rajastech.EGlass.Domain.StoreAgr
+﻿namespace Rajastech.EGlass.Domain.StoreAgr
 {
+    using Rajastech.EGlass.Domain.Core;
+    using System;
+
     public interface IStoreRepository : IRepository<Store, Guid>
     {
     }

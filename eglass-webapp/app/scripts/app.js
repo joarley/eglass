@@ -32,16 +32,16 @@ function nav_page_height() {
   var setHeight = $('#main').height();
   //menuHeight = $.left_panel.height();
   
-  var windowHeight = $(window).height() - $.navbar_height;
+  var windowHeight = $(window).height() - 49;
   //set height
 
   if (setHeight > windowHeight) {// if content height exceedes actual window height and menuHeight
-    $.left_panel.css('min-height', setHeight + 'px');
-    $.root_.css('min-height', setHeight + $.navbar_height + 'px');
+    $('#left-panel').css('min-height', setHeight + 'px');
+    $('body').css('min-height', setHeight + $.navbar_height + 'px');
 
   } else {
-    $.left_panel.css('min-height', windowHeight + 'px');
-    $.root_.css('min-height', windowHeight + 'px');
+    $('#left-panel').css('min-height', windowHeight + 'px');
+    $('body').css('min-height', windowHeight + 'px');
   }
 }
 
