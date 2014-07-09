@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.SymbolStore;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Rajastech.EGlass.Application.DTO.StoreDTOs
+﻿namespace Rajastech.EGlass.Application.DTO.StoreDTOs
 {
+    using Rajastech.EGlass.Application.DTO.Common;
+    using System.Collections.Generic;
+
     public class StoreAddDTO
     {
         public string Name { get; set; }
