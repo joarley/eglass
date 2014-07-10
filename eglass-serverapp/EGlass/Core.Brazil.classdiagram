@@ -1,41 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a850b507-2fe0-4201-9da2-f71130b86d72" name="Core.Brazil" linkedPackageId="aff5096f-c6e1-47e7-a5ed-17fa0d2a46a7" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="5e8b6467-eefe-4577-997a-24ef14091f8d">
-      <profileInstance Id="c3b60f21-bbcd-4c5d-977d-ea51fe093534" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="57d5e891-6e9c-4e6c-9c60-ac07e002f0de">
-      <profileInstance Id="485e0c72-98aa-414e-9f6a-7fa6a6489d4c" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="8c1b5f28-e130-484e-b68d-37ea2663dd83" name="BrazilAddress" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="dee94821-3776-4045-b6b7-c6c111b231e0" />
-        <suppliersInternal>
-          <interfaceRealization Id="c99e0cf4-d8f6-4614-a6fe-6d241094c388">
-            <interfaceMoniker Id="a8fc7f01-8446-4f13-bf3b-bf62d7b542c0" LastKnownName="IAddress" />
-            <elementDefinition Id="b8597a6c-519f-4ad4-abc3-c9f919fc2171" />
-          </interfaceRealization>
-        </suppliersInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <Interface Id="a8fc7f01-8446-4f13-bf3b-bf62d7b542c0" name="IAddress" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="56585be1-4f2a-4685-9552-e538afaacd33" />
-        <ownedAttributes>
-          <property Id="88722f98-2ecb-43a7-b92e-608f6f40f3a1" name="Attribute1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="394a3f5f-7a40-48a5-b8bd-dcfe045f883b" />
-          </property>
-        </ownedAttributes>
-      </Interface>
-    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="8d6f0399-08f3-4908-a51e-3ce1d3c38459" name="Core">
+        <elementDefinition Id="e290d1eb-2269-4b4c-b3af-dea7615b7562" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <Interface Id="63a09f7e-d60b-4b40-a7ea-9e651c241c3d" name="IAddress" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="56585be1-4f2a-4685-9552-e538afaacd33" />
+              <ownedAttributes>
+                <property Id="3fb309bb-bc2b-4fa5-84c1-7b7ce752c342" name="Attribute2" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="394a3f5f-7a40-48a5-b8bd-dcfe045f883b" />
+                </property>
+              </ownedAttributes>
+            </Interface>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <package Id="a0e773c4-c62f-45d5-b9d4-6618cc4a8c34" name="Brazil">
+              <elementDefinition Id="fe8dec8c-8e5e-4597-ba30-576f63193a72" />
+              <packagedElements>
+                <packageHasNamedElement>
+                  <class Id="8c1b5f28-e130-484e-b68d-37ea2663dd83" name="BrazilAddress" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="dee94821-3776-4045-b6b7-c6c111b231e0" />
+                    <suppliersInternal>
+                      <interfaceRealization Id="17dd768d-62f6-4ceb-b72d-8654b777512c">
+                        <interfaceMoniker Id="63a09f7e-d60b-4b40-a7ea-9e651c241c3d" LastKnownName="IAddress" />
+                        <elementDefinition Id="b8597a6c-519f-4ad4-abc3-c9f919fc2171" />
+                      </interfaceRealization>
+                    </suppliersInternal>
+                  </class>
+                </packageHasNamedElement>
+              </packagedElements>
+            </package>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
   </packagedElements>
   <package Id="aff5096f-c6e1-47e7-a5ed-17fa0d2a46a7" name="EGlass">
     <elementDefinition Id="484d6ba6-a4d3-4805-ad61-8bbe3d8382a4" />
@@ -45,6 +45,18 @@
           <elementDefinition Id="6f55290d-c0c2-45ec-848e-50c3eb186a40" />
         </profileInstance>
         <elementDefinition Id="3ea215fe-9b1f-4a06-84cb-a699c596d0c0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="5e8b6467-eefe-4577-997a-24ef14091f8d">
+        <profileInstance Id="c3b60f21-bbcd-4c5d-977d-ea51fe093534" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="57d5e891-6e9c-4e6c-9c60-ac07e002f0de">
+        <profileInstance Id="485e0c72-98aa-414e-9f6a-7fa6a6489d4c" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
       </packageHasProfileInstances>
     </profileInstances>
   </package>

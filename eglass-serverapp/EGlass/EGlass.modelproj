@@ -36,7 +36,22 @@
       <SubType>Content</SubType>
       <DependentUpon>Core.classdiagram</DependentUpon>
     </Content>
+    <Content Include="ModelDefinition\Package_1019.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1020.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1222.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package_1328.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1347.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1500.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package_2001.uml">

@@ -1,63 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="acbe6493-cc50-4e02-8688-5e51c87df18b" name="Core" linkedPackageId="34235918-29ce-432b-ae60-7627a5375003" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="b9b98733-5214-4260-a5e1-ee90295a8e55">
-      <profileInstance Id="3a19a99a-c630-420b-b31b-5d9814bd4aa0" name="TextTemplateBindings">
-        <elementDefinition Id="6f55290d-c0c2-45ec-848e-50c3eb186a40" />
-      </profileInstance>
-      <elementDefinition Id="3ea215fe-9b1f-4a06-84cb-a699c596d0c0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
-    <logicalClassDesignerModelHasTypes>
-      <Interface Id="97f956a8-b21e-4585-800f-76dce925ad2e" name="IAddress" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="56585be1-4f2a-4685-9552-e538afaacd33" />
-        <ownedAttributes>
-          <property Id="97506cd5-7154-476e-ac63-8a877ccbdead" name="Attribute1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="394a3f5f-7a40-48a5-b8bd-dcfe045f883b" />
-          </property>
-        </ownedAttributes>
-      </Interface>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <Interface Id="a6bc8d43-01b5-459b-aefb-188c979591b8" name="IPhoneNumber" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="9b5c182c-90c3-4072-843c-26d8c029907f" />
-        <ownedOperations>
-          <operation Id="a45f231d-91b6-4054-8fe4-974cc7868153" name="GetFullPhoneNumber" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="7d968559-3894-4bad-9097-04ef4cff7bf9" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="ee16433b-f5a7-4532-8749-0cbac58ac4a5" direction="Return">
-                  <elementDefinition Id="8b53961f-7f7c-4f65-89a3-8fa931cdb38d" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="5a4c06e7-54e9-4ef6-b947-6f346d3813de" LastKnownName="String" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-        </ownedOperations>
-      </Interface>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="9adc004b-303d-4b92-a37f-dfc392a369b5" name="Country" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="feb65da3-5b0f-40bc-8e7a-e4653c4cdbe5" />
-        <ownedAttributesInternal>
-          <property Id="9d1ced86-26e7-48f4-824a-7e046fe22f9f" name="CodeISOA2" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="1c0ffc59-71de-49e9-bac7-578cd20df6f0" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="b66ccc88-c1de-4e3e-8516-3d48537052c5" LastKnownName="String" />
-            </type_NamedElement>
-          </property>
-          <property Id="e6174de4-7b5e-48ce-816f-2e74db5af9f0" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="e48fe201-d162-4ba2-89ea-bc225818bdc6" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="de8a32a8-3910-4ed2-a311-3c463747da8a" LastKnownName="String" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
     <packageHasNamedElement>
       <referencedType Id="de8a32a8-3910-4ed2-a311-3c463747da8a" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
         <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
@@ -73,6 +16,62 @@
         <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
       </referencedType>
     </packageHasNamedElement>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="96297e85-07bd-433d-b80a-d988ac6c1ddb" name="Core">
+        <elementDefinition Id="e290d1eb-2269-4b4c-b3af-dea7615b7562" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <Interface Id="97f956a8-b21e-4585-800f-76dce925ad2e" name="IAddress" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="56585be1-4f2a-4685-9552-e538afaacd33" />
+              <ownedAttributes>
+                <property Id="97506cd5-7154-476e-ac63-8a877ccbdead" name="Attribute2" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="394a3f5f-7a40-48a5-b8bd-dcfe045f883b" />
+                </property>
+              </ownedAttributes>
+            </Interface>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <Interface Id="a6bc8d43-01b5-459b-aefb-188c979591b8" name="IPhoneNumber" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="9b5c182c-90c3-4072-843c-26d8c029907f" />
+              <ownedOperations>
+                <operation Id="a45f231d-91b6-4054-8fe4-974cc7868153" name="GetFullPhoneNumber" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="7d968559-3894-4bad-9097-04ef4cff7bf9" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="ee16433b-f5a7-4532-8749-0cbac58ac4a5" direction="Return">
+                        <elementDefinition Id="8b53961f-7f7c-4f65-89a3-8fa931cdb38d" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="5a4c06e7-54e9-4ef6-b947-6f346d3813de" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperations>
+            </Interface>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="9adc004b-303d-4b92-a37f-dfc392a369b5" name="Country" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="feb65da3-5b0f-40bc-8e7a-e4653c4cdbe5" />
+              <ownedAttributesInternal>
+                <property Id="9d1ced86-26e7-48f4-824a-7e046fe22f9f" name="CodeISOA2" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1c0ffc59-71de-49e9-bac7-578cd20df6f0" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b66ccc88-c1de-4e3e-8516-3d48537052c5" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="e6174de4-7b5e-48ce-816f-2e74db5af9f0" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e48fe201-d162-4ba2-89ea-bc225818bdc6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="de8a32a8-3910-4ed2-a311-3c463747da8a" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
   </packagedElements>
   <package Id="34235918-29ce-432b-ae60-7627a5375003" name="EGlass">
     <elementDefinition Id="484d6ba6-a4d3-4805-ad61-8bbe3d8382a4" />
@@ -88,6 +87,12 @@
           <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
         </profileInstance>
         <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="b9b98733-5214-4260-a5e1-ee90295a8e55">
+        <profileInstance Id="3a19a99a-c630-420b-b31b-5d9814bd4aa0" name="TextTemplateBindings">
+          <elementDefinition Id="6f55290d-c0c2-45ec-848e-50c3eb186a40" />
+        </profileInstance>
+        <elementDefinition Id="3ea215fe-9b1f-4a06-84cb-a699c596d0c0" />
       </packageHasProfileInstances>
     </profileInstances>
   </package>

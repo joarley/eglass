@@ -11,11 +11,11 @@
         <classMoniker
           Id="00ff5938-3630-49df-a7c4-1dca9acb74e7"
           LastKnownName="Profile"
-          LastKnownLocation="EGlass.uml" />
+          LastKnownLocation="Package_1500.uml" />
         <classMoniker
           Id="1e10cd05-697f-4cae-a3b3-ae8c5e0f3f44"
           LastKnownName="Action"
-          LastKnownLocation="EGlass.uml" />
+          LastKnownLocation="Package_1500.uml" />
       </annotatedElements>
     </comment>
     <comment
@@ -25,7 +25,7 @@
         <classMoniker
           Id="a44b83eb-1833-4fd4-8549-a3c9f620b0ac"
           LastKnownName="User"
-          LastKnownLocation="EGlass.uml" />
+          LastKnownLocation="Package_1500.uml" />
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
@@ -51,495 +51,10 @@
   </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
-      <class
-        Id="a44b83eb-1833-4fd4-8549-a3c9f620b0ac"
-        name="User"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <targetEnds>
-          <association
-            Id="1b738cc5-9e74-4acd-86a9-f71a946c8831"
-            isDerived="false"
-            sourceEndRoleName="User"
-            targetEndRoleName="Profile"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="00ff5938-3630-49df-a7c4-1dca9acb74e7"
-              LastKnownName="Profile"
-              LastKnownLocation="EGlass.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="3eb9e4dd-401a-4a00-8667-a9b46bd84cb6"
-                  name="User"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="26f685f5-8c1a-447e-bb78-f208eb7d41bb"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="62e9cfde-3a8b-4eda-bce0-f5543ca7a79c"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="139f63ba-8244-47b0-b6c0-211eb70336a9"
-                  name="Profile"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="fb3d0932-2af3-4dc6-91b7-cb167b73ffeb"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="90e3147b-7bd6-4385-b414-54b693953432"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
-      </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
-        Id="00ff5938-3630-49df-a7c4-1dca9acb74e7"
-        name="Profile"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <targetEnds>
-          <association
-            Id="5f76265b-a54d-4195-8942-770f93d6ba13"
-            isDerived="false"
-            sourceEndRoleName="Profile"
-            targetEndRoleName="Action"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="1e10cd05-697f-4cae-a3b3-ae8c5e0f3f44"
-              LastKnownName="Action"
-              LastKnownLocation="EGlass.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="c9dc0e1b-4d61-4dd9-a144-72332ddd6beb"
-                  name="Profile"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="00467277-04b7-43b1-ac7f-b2843fc52907"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="feb90260-d01c-4a1c-8d9e-c01771aa82f7"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="a1915030-19fa-45f6-b955-aa23fc1092ba"
-                  name="Action"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="b803ac8d-c76e-48c4-a6ed-3a36c92f1870"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="3c8281fc-07df-422e-a360-39b18692dd57"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
-      </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <packageMoniker
         Id="cd78fc15-e045-4478-8ae9-44eb9198e6a3"
         LastKnownName="Package1"
         LastKnownLocation="Package_2001.uml" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
-        Id="1e10cd05-697f-4cae-a3b3-ae8c5e0f3f44"
-        name="Action"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <ownedAttributesInternal>
-          <property
-            Id="5afd434d-be5a-4a3d-aa14-17e45f2acc32"
-            name="Role"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <lowerValueInternal>
-              <literalString
-                Id="f5036354-7348-4144-8fcf-3c20d522f27a"
-                name="Lower"
-                value="1" />
-            </lowerValueInternal>
-            <upperValueInternal>
-              <literalString
-                Id="fd0d7466-fc2b-44a1-a618-8765e0ac81f3"
-                name="Upper"
-                value="1" />
-            </upperValueInternal>
-            <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                LastKnownName="String"
-                LastKnownLocation="EGlass.uml" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
-      </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
-        Id="ac268596-a7e8-4610-a049-28bba630f918"
-        name="Store"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <targetEnds>
-          <association
-            Id="eb84be3a-bef8-4570-8ae8-6d8af621646d"
-            isDerived="false"
-            sourceEndRoleName="Store"
-            targetEndRoleName="StoreType"
-            isLeaf="false"
-            isAbstract="false">
-            <enumerationMoniker
-              Id="4c402a34-6aaf-4b16-84d4-54a61d0c8d76"
-              LastKnownName="StoreType"
-              LastKnownLocation="EGlass.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="27c29905-0c00-4f4b-8129-2313761f499e"
-                  name="Store"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Composite"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="007dd657-a2ce-41f9-957e-813e3e982dd1"
-                  name="StoreType"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="true" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="1b6c641c-eaf4-429e-9436-0f6e710e74cc"
-            isDerived="false"
-            sourceEndRoleName="Store"
-            targetEndRoleName="IStoreLocalizedDetails"
-            isLeaf="false"
-            isAbstract="false">
-            <interfaceMoniker
-              Id="e18c7241-d24c-4410-8182-08ef8867d12f"
-              LastKnownName="IStoreLocalizedDetails"
-              LastKnownLocation="EGlass.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="3e64eda6-1568-4882-930c-46f9ae0b7f84"
-                  name="Store"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Composite"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="3608c8e8-382b-424f-be40-3fc561333831"
-                  name="IStoreLocalizedDetails"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="true">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="c72811ed-9f99-4988-a3e9-bf7b10c66b09"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="14df5feb-3e10-445b-a4b1-73081f6c26fd"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
-        <ownedAttributesInternal>
-          <property
-            Id="37b4b000-701f-4728-9bf3-50d59aa82f51"
-            name="Name"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                LastKnownName="String"
-                LastKnownLocation="EGlass.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="797f0197-5291-48d8-819c-5729b21c8638"
-            name="Site"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                LastKnownName="String"
-                LastKnownLocation="EGlass.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="a4b79c7b-32e8-4fa4-9e6f-3a7c7145083f"
-            name="PhoneNumbers"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <lowerValueInternal>
-              <literalString
-                Id="5748b7de-74bf-4abf-be86-d8dc376ac691"
-                name="Lower"
-                value="*" />
-            </lowerValueInternal>
-            <upperValueInternal>
-              <literalString
-                Id="8f716d3f-f36c-4b62-9599-8591b8bb580b"
-                name="Upper"
-                value="*" />
-            </upperValueInternal>
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="88acffba-4bdb-4b10-8a8f-ffe6cfb9d98d"
-                LastKnownName="IPhoneNumber"
-                LastKnownLocation="EGlass.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="8e7e79a5-cdb2-4000-829a-d6888e8711e7"
-            name="Addresses"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <lowerValueInternal>
-              <literalString
-                Id="cb69c842-a198-42bd-98bf-bbdc7162f6ac"
-                name="Lower"
-                value="*" />
-            </lowerValueInternal>
-            <upperValueInternal>
-              <literalString
-                Id="63f18953-843f-458d-a057-b4b032af2d22"
-                name="Upper"
-                value="*" />
-            </upperValueInternal>
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="dae51cfc-edc0-481e-b4f0-86f2e7c41fee"
-                LastKnownName="IAddress"
-                LastKnownLocation="EGlass.uml" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
-      </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <Interface
-        Id="e18c7241-d24c-4410-8182-08ef8867d12f"
-        name="IStoreLocalizedDetails"
-        isAbstract="false"
-        isLeaf="false" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <enumeration
-        Id="4c402a34-6aaf-4b16-84d4-54a61d0c8d76"
-        name="StoreType"
-        isAbstract="false"
-        isLeaf="false">
-        <ownedLiterals>
-          <enumerationLiteral
-            Id="c65452b3-ccf4-4808-9d82-5f4984671e58"
-            name="Commerce" />
-          <enumerationLiteral
-            Id="dc2e7be8-108e-43f6-894d-33e006d912c7"
-            name="Industry" />
-        </ownedLiterals>
-      </enumeration>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <enumeration
-        Id="f975f1f1-06cc-49e2-9ba5-ae2629cc8f69"
-        name="StoreState"
-        isAbstract="false"
-        isLeaf="false">
-        <targetEnds>
-          <association
-            Id="da2ef6e3-c624-4fd0-b8e3-cbcd9b8a34bc"
-            isDerived="false"
-            sourceEndRoleName="StoreState"
-            targetEndRoleName="Store"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="ac268596-a7e8-4610-a049-28bba630f918"
-              LastKnownName="Store"
-              LastKnownLocation="EGlass.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="02ba5692-d3f6-48e3-b2fc-59961f7eab04"
-                  name="StoreState"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="true">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="27b67e4e-8eb1-4937-a0b0-25872a1d76a0"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="9ffce335-bba0-4ac2-941e-08a097a866da"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="2dd40961-faf7-4f0c-908b-ee0859f7c101"
-                  name="Store"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Composite"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
-        <ownedLiterals>
-          <enumerationLiteral
-            Id="981a0436-bed8-46bf-9694-e9197f873e9b"
-            name="Actived" />
-          <enumerationLiteral
-            Id="d4cef0e1-d137-4c49-8013-1d03556e3467"
-            name="Deactivated" />
-        </ownedLiterals>
-      </enumeration>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <undefinedType
@@ -547,172 +62,9 @@
         name="IPhoneNumber" />
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <class
-        Id="df001e09-ccdb-4cfd-b5b1-65bc6ca0794d"
-        name="BrazilStoreLocalizedDetails"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <suppliersInternal>
-          <interfaceRealization
-            Id="5386a1b4-4a03-4cae-a60d-0d74045988c5">
-            <interfaceMoniker
-              Id="e18c7241-d24c-4410-8182-08ef8867d12f"
-              LastKnownName="IStoreLocalizedDetails"
-              LastKnownLocation="EGlass.uml" />
-          </interfaceRealization>
-        </suppliersInternal>
-        <ownedAttributesInternal>
-          <property
-            Id="35a75a97-c90d-46f3-985b-78030b2085a7"
-            name="RazaoSocial"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                LastKnownName="String"
-                LastKnownLocation="EGlass.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="11f5ffe8-7dd8-4638-9342-d3e7035a2c3d"
-            name="NomeFantasia"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                LastKnownName="String"
-                LastKnownLocation="EGlass.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="87dd08c6-cc66-49b6-b35c-3d2243b915f0"
-            name="CNPJ"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                LastKnownName="String"
-                LastKnownLocation="EGlass.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="88bf7f14-eb8c-400d-90da-ad7c260f8616"
-            name="InscrissaoEstadual"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                LastKnownName="String"
-                LastKnownLocation="EGlass.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="00f089b8-474b-4379-ae9e-ffdcec699770"
-            name="IncrissaoMunicipal"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                LastKnownName="String"
-                LastKnownLocation="EGlass.uml" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
-      </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <undefinedType
         Id="dae51cfc-edc0-481e-b4f0-86f2e7c41fee"
         name="IAddress" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <Interface
-        Id="56585be1-4f2a-4685-9552-e538afaacd33"
-        name="IAddress"
-        isAbstract="false"
-        isLeaf="false">
-        <ownedAttributes>
-          <property
-            Id="394a3f5f-7a40-48a5-b8bd-dcfe045f883b"
-            name="Attribute1"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-        </ownedAttributes>
-      </Interface>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <Interface
-        Id="9b5c182c-90c3-4072-843c-26d8c029907f"
-        name="IPhoneNumber"
-        isAbstract="false"
-        isLeaf="false">
-        <ownedOperations>
-          <operation
-            Id="7d968559-3894-4bad-9097-04ef4cff7bf9"
-            name="GetFullPhoneNumber"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="true"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="8b53961f-7f7c-4f65-89a3-8fa931cdb38d"
-                  direction="Return">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                      LastKnownName="String"
-                      LastKnownLocation="EGlass.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-        </ownedOperations>
-      </Interface>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <Interface
@@ -739,7 +91,7 @@
                     <interfaceMoniker
                       Id="9b5c182c-90c3-4072-843c-26d8c029907f"
                       LastKnownName="IPhoneNumber"
-                      LastKnownLocation="EGlass.uml" />
+                      LastKnownLocation="Package_1222.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -768,68 +120,49 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="feb65da3-5b0f-40bc-8e7a-e4653c4cdbe5"
-        name="Country"
+        Id="2d13d01a-29bc-45b3-b369-e97b2d72e0e0"
+        name="Class1"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false">
-        <ownedAttributesInternal>
-          <property
-            Id="1c0ffc59-71de-49e9-bac7-578cd20df6f0"
-            name="CodeISOA2"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                LastKnownName="String"
-                LastKnownLocation="EGlass.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="e48fe201-d162-4ba2-89ea-bc225818bdc6"
-            name="Name"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                LastKnownName="String"
-                LastKnownLocation="EGlass.uml" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
-      </class>
+        isActiveClass="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <class
-        Id="dee94821-3776-4045-b6b7-c6c111b231e0"
-        name="BrazilAddress"
+      <Interface
+        Id="2c2d1a80-163c-4ef3-a7c0-f2c32753d7b6"
+        name="Interface1"
         isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <suppliersInternal>
-          <interfaceRealization
-            Id="b8597a6c-519f-4ad4-abc3-c9f919fc2171">
-            <interfaceMoniker
-              Id="56585be1-4f2a-4685-9552-e538afaacd33"
-              LastKnownName="IAddress"
-              LastKnownLocation="EGlass.uml" />
-          </interfaceRealization>
-        </suppliersInternal>
-      </class>
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="967a977d-4774-41e4-b26e-aa1a7286038f"
+        name="IAddress"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="e290d1eb-2269-4b4c-b3af-dea7615b7562"
+        LastKnownName="Core"
+        LastKnownLocation="Package_1222.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="d8b085a9-afaf-4e4a-a63b-85112f18a24b"
+        LastKnownName="Package2"
+        LastKnownLocation="Package_1019.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c6439145-e1e1-402b-aff3-947a78ae3683"
+        LastKnownName="Store"
+        LastKnownLocation="Package_1347.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="99375034-e94f-4694-b33f-b4b3f2697674"
+        LastKnownName="User"
+        LastKnownLocation="Package_1500.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
