@@ -20,6 +20,31 @@
         private readonly IStoreRepository storeRepository;
         private readonly IPhoneNumberServiceFactory phoneNumberServiceFactory;
 
+        public StoreService(ITypeAdapterFactory typeAdapterFactory, IValidationFactory validationFactory,
+            IAddressServiceFactory addressServiceFactory, IStoreLocalizedDetailsServiceFactory storeLocalizedDetailsServiceFactory,
+            IStoreRepository storeRepository, IPhoneNumberServiceFactory phoneNumberServiceFactory)
+        {
+            if (typeAdapterFactory == null)
+                throw new ArgumentNullException("typeAdapterFactory");
+            if (validationFactory == null)
+                throw new ArgumentNullException("validationFactory");
+            if (addressServiceFactory == null)
+                throw new ArgumentNullException("addressServiceFactory");
+            if (storeLocalizedDetailsServiceFactory == null)
+                throw new ArgumentNullException("storeLocalizedDetailsServiceFactory");
+            if (storeRepository == null)
+                throw new ArgumentNullException("storeRepository");
+            if (phoneNumberServiceFactory == null)
+                throw new ArgumentNullException("phoneNumberServiceFactory");
+
+            this.typeAdapterFactory = typeAdapterFactory;
+            this.validationFactory = validationFactory;
+            this.addressServiceFactory = addressServiceFactory;
+            this.storeLocalizedDetailsServiceFactory = storeLocalizedDetailsServiceFactory;
+            this.storeRepository = storeRepository;
+            this.phoneNumberServiceFactory = phoneNumberServiceFactory;
+        }
+
         public StoreAbstractDTO AddStore(StoreAddDTO newStoreDto)
         {
             if (!Enum.IsDefined(typeof(StoreType), newStoreDto.StoreType))
@@ -29,11 +54,12 @@
                         Message = "Invalid value for store type"
                     });
 
-            Store newStore = new Store()
+            var newStore = new Store()
             {
                 Name = newStoreDto.Name,
                 Description = newStoreDto.Description,
-                StoreType = (StoreType)newStoreDto.StoreType
+                StoreType = (StoreType)newStoreDto.StoreType,
+                State = StoreState.Activated
             };
 
             //Create store details

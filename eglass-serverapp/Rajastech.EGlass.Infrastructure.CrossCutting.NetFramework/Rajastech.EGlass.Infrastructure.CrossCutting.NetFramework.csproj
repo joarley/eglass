@@ -53,6 +53,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TypeAdapter\AutomapperTypeAdapter.cs" />
     <Compile Include="TypeAdapter\AutomapperTypeAdapterFactory.cs" />
+    <Compile Include="TypeAdapter\Profiles\StoreProfiles\StoreProfile.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="NLog.config">
@@ -62,6 +63,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Rajastech.EGlass.Application.DTO\Rajastech.EGlass.Application.DTO.csproj">
+      <Project>{357b1cf9-7336-424d-b3fb-e4aa42d8d4d2}</Project>
+      <Name>Rajastech.EGlass.Application.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rajastech.EGlass.Domain\Rajastech.EGlass.Domain.csproj">
+      <Project>{21d1e75e-888d-4a33-8af3-4be768e0542c}</Project>
+      <Name>Rajastech.EGlass.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Rajastech.EGlass.Infrastructure.CrossCutting\Rajastech.EGlass.Infrastructure.CrossCutting.csproj">
       <Project>{41497e70-c03f-4c94-a58f-99d0b34a66a8}</Project>
       <Name>Rajastech.EGlass.Infrastructure.CrossCutting</Name>

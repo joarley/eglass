@@ -41,6 +41,8 @@
                     }
                 });
 
+                Mapper.AssertConfigurationIsValid();
+
                 //One initialization
                 _initialized = true;
             }
