@@ -44,7 +44,6 @@
     <Compile Include="CoreServices\IAddressServiceFactory.cs" />
     <Compile Include="CoreServices\IPhoneNumberService.cs" />
     <Compile Include="CoreServices\IPhoneNumberServiceFactory.cs" />
-    <Compile Include="IPhoneNumberService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoreServices\IStoreLocalizedDetailsService.cs" />
     <Compile Include="StoreServices\IStoreLocalizedDetailsServiceFactory.cs" />

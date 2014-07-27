@@ -39,7 +39,7 @@
 
             Config(kernel);
 
-            // Install our Ninject-based IDependencyResolver into the Web API config
+            // Install Ninject-based IDependencyResolver into the Web API config
             config.DependencyResolver = new NinjectDependencyResolver(kernel);
         }
     }
