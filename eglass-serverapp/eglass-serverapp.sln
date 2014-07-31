@@ -49,6 +49,30 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0-Modeling", "0-Modeling", 
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "EGlass", "EGlass\EGlass.modelproj", "{DAC6B47B-C709-4B08-8557-8A5C6C981ABB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5-Presentation", "5-Presentation", "{699DF9DC-FD01-4A92-8BE6-4A0C47DEAC53}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "eglass-web", "http://localhost:5682", "{D4C5FD83-E129-42C2-8162-99FF5895F5E3}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_5682"
+		Debug.AspNetCompiler.PhysicalPath = "..\eglass-web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_5682\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_5682"
+		Release.AspNetCompiler.PhysicalPath = "..\eglass-web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_5682\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\eglass-web\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -115,6 +139,10 @@ Global
 		{DAC6B47B-C709-4B08-8557-8A5C6C981ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAC6B47B-C709-4B08-8557-8A5C6C981ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAC6B47B-C709-4B08-8557-8A5C6C981ABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4C5FD83-E129-42C2-8162-99FF5895F5E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4C5FD83-E129-42C2-8162-99FF5895F5E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4C5FD83-E129-42C2-8162-99FF5895F5E3}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4C5FD83-E129-42C2-8162-99FF5895F5E3}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -138,5 +166,6 @@ Global
 		{E46C1197-F6C7-4632-8A84-1B4461919127} = {21704D23-3F21-4580-B7B8-FFB7F98529E8}
 		{095B9F1B-DFBD-49FB-9A9F-9C7E9C50B259} = {4753CDB1-9868-43E0-A649-BB8A092BBB0B}
 		{DAC6B47B-C709-4B08-8557-8A5C6C981ABB} = {6C5FEAA7-1A98-407E-BB69-388B8D103215}
+		{D4C5FD83-E129-42C2-8162-99FF5895F5E3} = {699DF9DC-FD01-4A92-8BE6-4A0C47DEAC53}
 	EndGlobalSection
 EndGlobal
