@@ -1,0 +1,31 @@
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap-sprockets";
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+
+@import "smartadmin/smartadmin-production";
+
+.minified .hide-minified {
+	display: none;
+}
+
+#loading-bar-spinner {
+  top: 60px !important;
+  right: 0px !important;
+  left: initial;
+}
+
+body {
+	font-family:"Open Sans", Arial,Helvetica,Sans-Serif;
+	font-size:13px;
+	line-height:1.428571429;
+	color:#333;
+}
+
+.nav-tabs { 
+	li {
+		cursor: pointer;
+	
+		.active {
+			cursor: auto;
+		}
+	}
+}

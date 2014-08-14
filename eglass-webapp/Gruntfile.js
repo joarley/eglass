@@ -13,6 +13,7 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   grunt.loadNpmTasks('grunt-throttle');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
@@ -55,13 +56,13 @@ module.exports = function(grunt) {
         files: ['test/spec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'karma']
       },
+      css: {
+        files: '**/*.scss',
+        tasks: ['sass']
+      },
       styles: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
-      },
-      less: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
-        tasks: ['less:server', 'autoprefixer']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -112,6 +113,28 @@ module.exports = function(grunt) {
       }
     },
 
+    /**
+    * Sass
+    */
+    sass: {
+      dev: {
+        options: {
+          style: 'expanded'
+        },
+        files: {
+          '<%= yeoman.app %>/styles/main.css' : '<%= yeoman.app %>/styles/main.scss'
+        }
+      },
+      dist: {
+        options: {
+          style: 'compressed'
+        },
+        files: {
+          '<%= yeoman.app %>/styles/main.css' : '<%= yeoman.app %>/styles/main.scss'
+        }
+      }
+    },
+
     // Make sure code styles are up to par and there are no obvious mistakes
     jshint: {
       options: {
@@ -127,42 +150,6 @@ module.exports = function(grunt) {
           jshintrc: 'test/.jshintrc'
         },
         src: ['test/spec/{,*/}*.js']
-      }
-    },
-
-    less: {
-      options: {
-        paths: ['./bower_components']
-      },
-      dist: {
-        options: {
-          cleancss: true,
-          report: 'gzip'
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/styles',
-          src: '{,*/}*.lesss',
-          dest: '.tmp/styles',
-          ext: '.css'
-        }]
-
-        //'!**<%= yeoman.app %>/styles/**',
-        //'<%= yeoman.app %>/styles/smartadmin/smartadmin-production.less'
-      },
-      server: {
-        options: {
-          sourceMap: true,
-          sourceMapBasepath: '<%= yeoman.app %>/',
-          sourceMapRootpath: '../'
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/styles',
-          src: ['{,*/}*.less', '!**/smartadmin/**'],
-          dest: '.tmp/styles',
-          ext: '.css'
-        }]
       }
     },
 
@@ -200,7 +187,20 @@ module.exports = function(grunt) {
     bowerInstall: {
       app: {
         src: ['<%= yeoman.app %>/index.html'],
-        ignorePath: '<%= yeoman.app %>/'
+        ignorePath: '<%= yeoman.app %>/',
+        overrides: {
+          "datatables-plugins": {
+              "main": [
+                "integration/bootstrap/3/datatables.bootstrap.css",
+                "integration/bootstrap/3/datatables.bootstrap.js"
+              ]
+          },
+          "datatables": {
+              "main": [
+                "media/js/jquery.dataTables.js"
+              ]
+          }
+        }
       }
     },
 
@@ -347,14 +347,12 @@ module.exports = function(grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
-        'less:server',
         'copy:styles'
       ],
       test: [
         'copy:styles'
       ],
       dist: [
-        'less:dist',
         'copy:styles',
         'imagemin',
         'svgmin'
@@ -405,6 +403,7 @@ module.exports = function(grunt) {
     grunt.task.run([
       'clean:server',
       'bowerInstall',
+      'sass:dev',
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
@@ -435,6 +434,7 @@ module.exports = function(grunt) {
     'ngmin',
     'copy:dist',
     'cdnify',
+    'sass:dist',
     'cssmin',
     'uglify',
     'rev',
@@ -442,9 +442,12 @@ module.exports = function(grunt) {
     'htmlmin'
   ]);
 
+  grunt.registerTask('sass_', [
+    'sass:dist'
+  ]);
+
   grunt.registerTask('default', [
     'newer:jshint',
-    //'test',
     'build'
   ]);
 };

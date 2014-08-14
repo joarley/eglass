@@ -27,8 +27,9 @@ angular
 * Note: This script uses JSthrottle technique so don't worry about memory/CPU usage
 */
 
+/* jshint ignore:start */
 // Fix page and nav height
-function nav_page_height() {
+function navPageHeight() {
   var setHeight = $('#main').height();
   //menuHeight = $.left_panel.height();
   
@@ -45,14 +46,15 @@ function nav_page_height() {
   }
 }
 
+
 $(document).ready(function(){
 $('#main').resize(function() {
-  nav_page_height();
+  navPageHeight();
   check_if_mobile_width();
 })
 
 $('nav').resize(function() {
-  nav_page_height();
+  navPageHeight();
 })
 
 function check_if_mobile_width() {
@@ -65,3 +67,4 @@ function check_if_mobile_width() {
 });
 
 /* ~ END: NAV OR #LEFT-BAR RESIZE DETECT */
+/* jshint ignore:end */

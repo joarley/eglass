@@ -4,10 +4,12 @@ angular.module('eglass-webapp')
   .directive('headerTabWidget', function () {
     function link(scope, element) {
         element.find('li a').click(function (e) {
-          e.preventDefault()
-          $(this).tab('show')
+          e.preventDefault();
+          /* jshint ignore:start */
+          $(this).tab('show');
+          /* jshint ignore:end */
         });
-    }
+      }
 
     return {
       template: '',
