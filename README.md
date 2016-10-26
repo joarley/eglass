@@ -1,4 +1,4 @@
 E-Glass
 ======
 
-E-Glass ERP
+DDD Architecture Concepts
